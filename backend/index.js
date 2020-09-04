@@ -1,6 +1,11 @@
 let express = require('express');
 let app = express();
 let {connection} = require('./db/dbconnector');
+let {router} = require('./routes/routes');
+let bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+app.use('/api', router);
 
 app.listen(3000, () => {
     connection.connect((err) => {
@@ -11,4 +16,6 @@ app.listen(3000, () => {
        
         console.log('connected as id ' + connection.threadId);
       });
+
+      //connection.end();
 });
