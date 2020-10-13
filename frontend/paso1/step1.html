@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clasificados - Login</title>
+    <link rel="stylesheet" href="step1.css" />
+</head>
+
+<body>
+    <header class="header">
+        <h1>
+            <img src="img/logo-header.svg" class="logo" alt="Clasificados app"/>
+        </h1>
+    </header>
+    <main class="main">
+        <section class="wrapper-page">
+            <div class="main-options">
+                <h3>¡Bienvenido!</h3>
+                <div>User name</div>
+                <div class="search-publish-container">
+                    <div class="search-publish">
+                        <input type="radio" id="search" class="search-option-button" name="searchPublish" checked>
+                        <!-- <img src="../bolsa.svg" alt="logo-app" aria-hidden="true"/> -->
+                        <label for="search"><strong>Buscar </strong>un producto o servicio</label>
+                    </div>
+                    <div class="search-publish">
+                        <input type="radio" id="publish" class="publish-option-button" name="searchPublish">
+                        <!-- <img src="../bolsa.svg" alt="logo-app" aria-hidden="true"/> -->
+                        <label for="publish"><strong>Publicar </strong>un producto o servicio</label>
+                    </div>
+                </div>
+            </div>
+            <div class="publish-options-container">
+                <div class="title">¿Qué quieres vender?</div>
+                <div class="disclaimer">Los campos marcados con asterico (*) son obligatorios</div>
+                <div class="publish-options-wrapper">
+                    <div class="publish-option">
+                        <input type="radio" id="product" name="productService" checked>
+                        <label for="product">Producto</label>
+                    </div>
+                    <div class="publish-option">
+                        <input type="radio" id="service" name="productService">
+                        <label for="service">Servicio</label>
+                    </div>
+                </div>
+            </div>
+            <form class="first-step-form" action="step2.html">
+                <div class="form-field-wrapper">
+                    <label for="productType">Tipo del producto o servicio*:</label>
+                    <select
+                        class="text-box"
+                        id="productType"
+                        name="productType"
+                        required/>
+                        <option value="" disabled selected>
+                            Tipo de producto o servicio
+                        </option>
+                    </select>
+                </div>
+                <div class="form-field-wrapper">
+                    <label for="productName">Nombre del producto o servicio*:</label>
+                    <input 
+                        class="text-box"
+                        id="productName"
+                        type="text"
+                        name="productName"
+                        placeholder="¿Qué ofreces?"
+                        autocomplete="off"
+                        required/>
+                </div>
+                <div class="form-field-wrapper">
+                    <label for="productDescription">Descripción del producto o servicio*:</label>
+                    <textarea
+                        class="product-description"
+                        id="productDescription"
+                        name="productDescription"
+                        maxlength="300"
+                        placeholder="Describe de forma corta pero precisa el producto o servicio que estás ofreciendo…"
+                        required/></textarea>
+                </div>
+                <div class="form-field-wrapper">
+                    <label for="productLocation">Ubicación del producto o servicio*:</label>
+                    <select
+                        class="text-box"
+                        id="productLocation"
+                        name="productLocation"
+                        required/>
+                        <option value="" disabled selected>Barrio, municipio, ciudad</option>
+                    </select>                        
+                </div>
+                <div class="form-action">
+                    <button type="submit">SIGUIENTE</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
