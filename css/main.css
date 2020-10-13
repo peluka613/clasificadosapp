@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+  
+header {
+    background: transparent linear-gradient(180deg, #6ae7fd 0%, #0dc3ef 100%) 0% 0% no-repeat padding-box;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+.main {
+    padding: 12px;
+}
+
+.welcome-message {
+    color: #233BA0;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    font-size: 20px;
+}
