@@ -1,16 +1,15 @@
-const { connection } = require('../db/dbconnector');
+const { login } = require('../services/usersService');
 
-function login(req, res) {
-    const consulta = `SELECT id, nombre, apellido, email, CONCAT(NOMBRE, " ", APELLIDO) AS nombre_completo FROM USUARIOS WHERE EMAIL = ? AND PASSWD = ?`;
-    const filtros = [req.body.email, req.body.passwd];
-    connection.query(consulta, filtros, function (err, resultado, campos) {
-        if (err) throw err;
-        if(resultado[0]) {
-            res.status(200).send(resultado[0]);
+function auth(req, res) {
+    login(req.body.email, req.body.passwd).then(function(clasificados) {
+        if(clasificados.length == 0) {
+            res.status(401).send({error: "Usuario o password equivocado"});
         } else {
-            res.status(401).send('Usuario o contraseña equivocados');
+            res.status(200).send(clasificados[0]);
         }        
+    }).catch(function(err) {
+        res.status(500).send({error: "Ha ocurrido un error inesperado"});
     });
 }
 
-exports.login = login;
+exports.auth = auth;
