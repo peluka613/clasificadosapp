@@ -19,6 +19,12 @@ h1, h2, h3, h4 {
     padding: 12px;
 }
 
+.logo-app-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
 .page-heading {
     color: #233BA0;
     display: flex;
@@ -59,6 +65,12 @@ h1, h2, h3, h4 {
     border: 1px solid #233BA0;
 }
 
+.form-action {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
 .primary-button {
     background: #F0F1F3;
     appearance: none;
@@ -74,10 +86,4 @@ h1, h2, h3, h4 {
 .primary-button:hover {
     background: linear-gradient(180deg, #4360D1 0%, #20389C 100%) 0% 0% no-repeat;
     box-shadow: 0px 3px 6px #607AE2;
-}
-
-.form-action {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
 }
