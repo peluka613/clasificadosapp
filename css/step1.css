@@ -1,0 +1,46 @@
+.logo-app-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* Publish options */
+.publish-options-container {
+  color: #233BA0;
+  margin: 0 28px;
+}
+
+.publish-options-container .title {
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.publish-options-container .disclaimer {
+  color: #607AE2;
+  font-size: 12px;
+}
+
+.publish-options-wrapper {
+  display: flex;
+  margin-top: 19px;
+  margin-bottom: 39px;
+}
+
+.publish-option ~ .publish-option {
+  margin-left: 25px;
+}
+
+/* Select */
+.form-field-wrapper select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Product description */
+.product-description {
+  font-size: 12px;
+  height: 114px;
+  padding: 13px 21px 30px;
+  resize: none;
+  text-align: left;
+}

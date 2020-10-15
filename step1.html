@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clasificados - Login</title>
-    <link rel="stylesheet" href="step1.css" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Clasificados - Step1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/step1.css"/>
 </head>
 
 <body>
@@ -16,22 +18,12 @@
     </header>
     <main class="main">
         <section class="wrapper-page">
-            <div class="main-options">
-                <h3>¡Bienvenido!</h3>
-                <div>User name</div>
-                <div class="search-publish-container">
-                    <div class="search-publish">
-                        <input type="radio" id="search" class="search-option-button" name="searchPublish" checked>
-                        <!-- <img src="../bolsa.svg" alt="logo-app" aria-hidden="true"/> -->
-                        <label for="search"><strong>Buscar </strong>un producto o servicio</label>
-                    </div>
-                    <div class="search-publish">
-                        <input type="radio" id="publish" class="publish-option-button" name="searchPublish">
-                        <!-- <img src="../bolsa.svg" alt="logo-app" aria-hidden="true"/> -->
-                        <label for="publish"><strong>Publicar </strong>un producto o servicio</label>
-                    </div>
-                </div>
-            </div>
+            <!-- <iframe 
+                src="landing.html"
+                onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"
+                title="Clasificados Landing">
+            </iframe> -->
+            <!-- ****************LANDING COMPONENT******************* -->
             <div class="publish-options-container">
                 <div class="title">¿Qué quieres vender?</div>
                 <div class="disclaimer">Los campos marcados con asterico (*) son obligatorios</div>
@@ -73,7 +65,7 @@
                 <div class="form-field-wrapper">
                     <label for="productDescription">Descripción del producto o servicio*:</label>
                     <textarea
-                        class="product-description"
+                        class="text-box product-description"
                         id="productDescription"
                         name="productDescription"
                         maxlength="300"
@@ -91,7 +83,7 @@
                     </select>                        
                 </div>
                 <div class="form-action">
-                    <button type="submit">SIGUIENTE</button>
+                    <button class="primary-button" type="submit">SIGUIENTE</button>
                 </div>
             </form>
         </section>
