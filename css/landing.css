@@ -47,12 +47,12 @@ header {
     display: flex;
     flex-direction: column;
     font-size: 12px;
-    height: 100px;
     justify-content: center;
     text-align: center;
     transition-duration:  .8s, .2s;
     transition-property: background, color ;
     width: 30vmin;
+    padding: 5px;
 }
 
 .action-container:hover {
@@ -60,21 +60,19 @@ header {
     color: #fff;
 }
 
-.svg-icon {
-    height: 30px;
-    padding: 10px;
-    fill: #49d8f7;
-    width: 100%;
-}
-
-.svg-icon:hover {
+.action-container:hover .svg-icon {
     fill: #FFF;
 }
 
-.action-container h4 {
-    margin-bottom: 10px;
+.svg-icon {
+    height: 30px;
+    fill: #49d8f7;
+}
+
+.action-container p {
     font-weight: 400;
-    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 0;
 }
 
 .action-container span {
