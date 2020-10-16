@@ -54,7 +54,7 @@ h1, h2, h3, h4 {
     width: 100%;
     max-width: 297px;
     padding: 12px;
-    text-align: center;
+    text-align-last: center;
     color: #233BA0;
     box-sizing: border-box;
     transition: border 0.4s linear;
