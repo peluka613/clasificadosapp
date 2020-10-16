@@ -1,7 +1,6 @@
 /* Publish options */
 .publish-options-container {
   color: #233BA0;
-  margin: 0 28px;
 }
 
 .publish-option {
@@ -77,4 +76,15 @@
   padding: 13px 21px 30px;
   resize: none;
   text-align: left;
+}
+
+
+@media only screen and (min-width: 769px) {
+  .publish-options-container {
+    text-align: center;
+  }
+
+  .publish-options-wrapper {
+    justify-content: center;
+  }
 }

@@ -17,20 +17,9 @@ header {
     border-radius: 48% 0 0 48%;
 }
 
-.landing-main {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
 .landing-welcome {
     flex-direction: column;
     margin-top: 25px;
-}
-
-.wrapper-page {
-    margin: 0 auto;
-    width: 80vmin;
 }
 
 .landing-welcome h2,
