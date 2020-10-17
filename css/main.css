@@ -127,7 +127,7 @@ h4 {
   font-size: 12px;
   justify-content: center;
   text-align: center;
-  transition-duration:  .8s, .2s,;
+  transition-duration:  .8s, .2s;
   transition-property: background, color;
   width: 30vmin;
   padding: 5px;
