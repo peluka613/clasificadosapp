@@ -12,9 +12,14 @@ header {
   align-items: center;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
     margin: 0;
     font-size: 20px;
+}
+
+h4 {
+  margin: 0;
+  font-size: 12px;
 }
 
 .main {
@@ -95,6 +100,21 @@ h1, h2, h3, h4 {
   box-shadow: 0px 3px 6px #607ae2;
 }
 
+#previous-button {
+  height: 48px;
+  width: 60px;
+}
+
+#exit-button {
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  width: 60px;
+  border-radius: 48% 0 0 48%;
+}
+
 
 .action-container {
   align-items: center;
@@ -107,8 +127,8 @@ h1, h2, h3, h4 {
   font-size: 12px;
   justify-content: center;
   text-align: center;
-  transition-duration:  .8s, .2s;
-  transition-property: background, color ;
+  transition-duration:  .8s, .2s,;
+  transition-property: background, color;
   width: 30vmin;
   padding: 5px;
   text-decoration: none;
