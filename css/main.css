@@ -70,6 +70,11 @@ h4 {
   color: #233ba0;
   box-sizing: border-box;
   transition: border 0.4s linear;
+  font-size: 14px;
+}
+
+.form-field-wrapper input.text-box {
+  height: 45px;
 }
 
 .form-field-wrapper .text-box:focus {
