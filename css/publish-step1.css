@@ -152,19 +152,45 @@ header {
 }
 
 /* Product description */
-.product-description {
+.form-field-wrapper .product-description {
+  border-radius: 5px;
+  border: 1px solid #49d8f7;
+  box-sizing: border-box;
+  color: #9D9D9D;
+  font-family: 'Poppins';
   font-size: 12px;
   height: 114px;
+  max-width: 297px;
   padding: 13px 21px 30px;
   resize: none;
   text-align: left;
-  font-family: 'Poppins';
+  transition: border 0.4s linear;
+  width: 100%;
+}
+
+.form-field-wrapper .product-description:focus {
+  outline: 0;
+  border: 1px solid #233ba0;
+}
+
+.form-field-wrapper .char-counter {
+  align-self: flex-end;
+  color: #AFAFAF;
   font-size: 12px;
+  margin: 6px 8px 0 0;
 }
 
 @media only screen and (min-width: 769px) {
   .publish-options-container {
     text-align: center;
+  }
+
+  .form-field-wrapper .product-description {
+    max-width: none;
+  }
+
+  .form-field-wrapper .char-counter {
+    margin: 6px 0 0 0;
   }
 
   .publish-options-wrapper {
