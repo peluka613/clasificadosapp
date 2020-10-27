@@ -48,24 +48,38 @@ function renderProducts(products) {
   //   `;
   // }
 
+  // BAD WAY
+  // products.forEach(product => {
+  //   const html = `
+  //   <div class="product-card">
+  //     <img src="img/${product.FOTO}" alt="imagen producto">
+  //     <div class="product-card-text-container">
+  //       <h4>${product.NOMBRE}</h4>
+  //       <p>${product.DESCRIPCION}</p>
+  //     </div>
+  //   </div>
+  //   `;
+
+  //   const productElement = document.createElement('div');
+
+  //   productElement.innerHTML = html;
+  //   productWrapper.appendChild(productElement);
+  // });
+
+  // GOOD WAY
   products.forEach(product => {
-    const html = `
-    <div class="product-card">
-      <img src="img/${product.FOTO}" alt="imagen producto">
-      <div class="product-card-text-container">
-        <h4>${product.NOMBRE}</h4>
-        <p>${product.DESCRIPCION}</p>
+    productsHtml += `
+      <div class="product-card">
+        <img src="img/${product.FOTO}" alt="imagen producto">
+        <div class="product-card-text-container">
+          <h4>${product.NOMBRE}</h4>
+          <p>${product.DESCRIPCION}</p>
+        </div>
       </div>
-    </div>
     `;
-
-    const productElement = document.createElement('div');
-
-    productElement.innerHTML = html;
-    productWrapper.appendChild(productElement);
   });
 
-  // productWrapper.innerHTML = productsHtml;
+  productWrapper.innerHTML = productsHtml;
 }
 
 function toggleSpinner(show) {
