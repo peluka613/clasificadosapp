@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 25px;
 }
 
 .image-wrapper {
@@ -40,6 +39,8 @@
   background: transparent linear-gradient(180deg, #96A8FC 0%, #677FE1 100%) 0% 0% no-repeat padding-box;
   border-radius: 28px;
   border: 0;
+  width: unset;
+  height: unset;
 }
 
 .secondary-button {

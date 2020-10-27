@@ -2,28 +2,12 @@ header {
     justify-content: space-between;
 }
 
-#previous-button {
-    height: 48px;
-    width: 60px;
-}
-
-#exit-button {
-    background-color: #fff;
-    cursor: pointer;
-    display: flex;
-    height: 48px;
-    justify-content: center;
-    width: 60px;
-    border-radius: 48% 0 0 48%;
-}
-
 .landing-welcome {
     flex-direction: column;
     margin-top: 25px;
 }
 
-.landing-welcome h2,
-.landing-welcome h3 {
+h2, h3 {
     text-align: center;
 }
 
@@ -36,4 +20,45 @@ header {
     display: flex;
     justify-content: space-around;
     margin-top: 60px;
+}
+
+.publication-list {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+}
+
+.publication-list h3 {
+    color: #233ba0;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.product-card {
+    display: flex;
+    height: 93px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.product-card-text-container {
+    margin: 0 15px;
+    overflow: hidden;
+}
+
+.product-card h4 {
+    color: #607ae2;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.product-card p {
+    color: #9d9d9d;
+    font-size: 12px;
+    font-weight: 300;
+    height: 50px;
+    line-height: 1.4;
+    margin: 0;
+    text-overflow: ellipsis;
 }
