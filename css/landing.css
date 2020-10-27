@@ -42,6 +42,11 @@ h2, h3 {
     width: 100%;
 }
 
+.product-card img {
+    max-width: 93px;
+    border-radius: 5px;
+}
+
 .product-card-text-container {
     margin: 0 15px;
     overflow: hidden;
@@ -61,4 +66,23 @@ h2, h3 {
     line-height: 1.4;
     margin: 0;
     text-overflow: ellipsis;
+}
+
+.spinner {
+    display: none;
+}
+
+.spinner img {
+    width: 100%;
+}
+
+.alert {
+    display: none;
+    padding: 25px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #f44336;
+    color: white;
 }
