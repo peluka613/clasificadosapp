@@ -66,10 +66,15 @@ h4 {
   width: 100%;
   max-width: 297px;
   padding: 12px;
-  text-align-last: center;
+  text-align: center;
   color: #233ba0;
   box-sizing: border-box;
   transition: border 0.4s linear;
+  font-size: 14px;
+}
+
+.form-field-wrapper input.text-box {
+  height: 45px;
 }
 
 .form-field-wrapper .text-box:focus {
