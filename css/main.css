@@ -12,14 +12,30 @@ header {
   align-items: center;
 }
 
-h1, h2, h3 {
-    margin: 0;
-    font-size: 20px;
+header.header-buttons {
+    justify-content: space-between;
 }
 
-h4 {
-  margin: 0;
-  font-size: 12px;
+header .header-button {
+    background-color: #FFFFFF;
+    width: 50px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .button-right {
+    border-radius: 0 45% 45% 0;
+}
+
+header .button-left {
+    border-radius: 45% 0 0 45%;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    font-size: 20px;
 }
 
 .main {
