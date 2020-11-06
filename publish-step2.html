@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Clasificados - Step1</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/publish-step2.css"/>
+</head>
+
+<body>
+    <header class="header">
+        <a id="previous-button"></a>
+        <h1>
+            <img src="img/logo-header.svg" class="logo" alt="Clasificados app" />
+        </h1>
+        <a id="exit-button" href="login.html">
+            <img src="img/exit.svg" alt="exit button" />
+        </a>
+    </header>
+    <main class="main">
+        <section class="wrapper-page">
+            <form class="first-step-form" action="step2.html">
+                <div class="form-field-wrapper">
+                    <label for="contactNumber">Número de contacto*:</label>
+                    <input
+                        class="text-box"
+                        id="contactNumber"
+                        type="text"
+                        name="contactNumber"
+                        placeholder="Número de Whatsapp"
+                        autocomplete="off"
+                        required/>
+                </div>
+                <div class="form-field-wrapper">
+                    <label for="photo">Foto del producto o servicio*:</label>
+                    <input
+                        class="text-box"
+                        id="photo"
+                        type="text"
+                        name="photo"
+                        placeholder="Selecciona una foto"
+                        autocomplete="off"
+                        required/>
+                    <div class="photo-disclaimer">Sólo puedes adjuntar imágenes JPG, PNG o GIF</div>
+                </div>
+                <div class="social-media-disclaimer">
+                    <p class="title">Redes sociales:</label>
+                    <p class="legend first-part">¿Quieres que tus clientes conozcan más sobre tu producto o servicio?</p>
+                    <p class="legend complement">Agrega tus redes sociales</p>
+                </div>
+                <div class="form-field-wrapper">
+                    <input
+                        class="text-box facebook-option background-image-position"
+                        id="facebookId"
+                        type="text"
+                        name="facebookId"
+                        placeholder="Facebook"
+                        autocomplete="off"
+                        required/>
+                </div>
+                <div class="form-field-wrapper">
+                    <input
+                        class="text-box instagram-option background-image-position"
+                        id="instagramId"
+                        type="text"
+                        name="instagramId"
+                        placeholder="Instagram"
+                        autocomplete="off"
+                        required/>
+                </div>
+                <div class="form-field-wrapper">
+                    <input
+                        class="text-box twitter-option background-image-position"
+                        id="twitterId"
+                        type="text"
+                        name="twitterId"
+                        placeholder="Twitter"
+                        autocomplete="off"
+                        required/>
+                </div>
+                <p class="publish-offer-disclaimer">Al publicar esta oferta usted está aceptando los términos y condiciones de tratamiento de datos.</p>
+                <div class="form-action">
+                    <button id="next" class="primary-button" type="submit">PUBLICAR OFERTA</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- <script src="../clasificadosapp/js/publish-step2.js"></script> -->
+</body>
+
+</html>
