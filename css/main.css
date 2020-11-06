@@ -13,29 +13,32 @@ header {
 }
 
 header.header-buttons {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 header .header-button {
-    background-color: #FFFFFF;
-    width: 50px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #ffffff;
+  width: 50px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header .button-right {
-    border-radius: 0 45% 45% 0;
+  border-radius: 0 45% 45% 0;
 }
 
 header .button-left {
-    border-radius: 45% 0 0 45%;
+  border-radius: 45% 0 0 45%;
 }
 
-h1, h2, h3, h4 {
-    margin: 0;
-    font-size: 20px;
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-size: 20px;
 }
 
 .main {
@@ -136,10 +139,9 @@ h1, h2, h3, h4 {
   border-radius: 48% 0 0 48%;
 }
 
-
 .action-container {
   align-items: center;
-  box-shadow: 0px 3px 6px #E5ECFA;
+  box-shadow: 0px 3px 6px #e5ecfa;
   border-radius: 5px;
   color: #233ba0;
   cursor: pointer;
@@ -148,7 +150,7 @@ h1, h2, h3, h4 {
   font-size: 12px;
   justify-content: center;
   text-align: center;
-  transition-duration:  .8s, .2s;
+  transition-duration: 0.8s, 0.2s;
   transition-property: background, color;
   width: 30vmin;
   padding: 5px;
@@ -156,12 +158,13 @@ h1, h2, h3, h4 {
 }
 
 .action-container:hover {
-  background: transparent linear-gradient(180deg, #96A8FC 0%, #677FE1 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #96a8fc 0%, #677fe1 100%) 0%
+    0% no-repeat padding-box;
   color: #fff;
 }
 
 .action-container:hover .svg-icon {
-  fill: #FFF;
+  fill: #fff;
 }
 
 .action-container .svg-icon {
@@ -177,6 +180,28 @@ h1, h2, h3, h4 {
 
 .action-container span {
   font-weight: 700;
+}
+
+.primary-button {
+  margin: 20px 0;
+  padding: 12px 45px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background: transparent linear-gradient(180deg, #96a8fc 0%, #677fe1 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 28px;
+  border: 0;
+  width: unset;
+  height: unset;
+}
+
+.secondary-button {
+  color: #233ba0;
+  border: 1px solid #233ba0;
+  border-radius: 28px;
+  padding: 5px 10px;
+  font-weight: bold;
 }
 
 @media only screen and (min-width: 769px) {

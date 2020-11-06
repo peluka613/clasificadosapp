@@ -37,9 +37,16 @@ h2, h3 {
 
 .product-card {
     display: flex;
-    height: 93px;
     max-width: 400px;
     width: 100%;
+    background-color: #fff;
+    padding: 11px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.product-card + .product-card {
+    margin-top: 12px;
 }
 
 .product-card img {
@@ -85,4 +92,42 @@ h2, h3 {
     width: 100%;
     background: #f44336;
     color: white;
+}
+
+.results-page {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: transparent linear-gradient(0deg, #F0F1F3 0%, #F0F1F300 100%) 0% 0% no-repeat padding-box;
+}
+
+.results-page .total-info {
+    padding: 20px 30px;
+    background-color: #fff;
+}
+
+.results-page .total-info {
+    color: #233BA0;
+    font-weight: bold;
+    margin: 0;
+}
+
+.results-page .total-info span {
+    color: #607AE2;
+}
+
+.results-page .change-search {
+    padding: 20px 30px;
+    background: rgba(240, 241, 243, 0.3);
+}
+
+.results-page .publication-list {
+    padding: 20px 30px;
+    margin-top: 0;
+}
+
+.results-page .actions {
+    display: flex;
+    justify-content: center;
 }
