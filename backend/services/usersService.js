@@ -1,6 +1,7 @@
 const { connection } = require('../db/dbconnector');
 
 function login(email, passwd) {
+  console.log(email, passwd);
   const consulta = `SELECT id, nombre, apellido, email, CONCAT(NOMBRE, " ", APELLIDO) AS nombre_completo FROM USUARIOS WHERE EMAIL = ? AND PASSWD = ?`;
   const filtros = [email, passwd];
   return new Promise(function(resolve, reject) {
@@ -8,7 +9,7 @@ function login(email, passwd) {
           if (err) reject(err);
           resolve(resultado);
         });
-    });   
+    });
 }
 
 exports.login = login;

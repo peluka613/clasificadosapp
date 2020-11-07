@@ -340,6 +340,17 @@ h4 {
   font-size: 12px;
 }
 
+.alert {
+  display: none;
+  padding: 25px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #f44336;
+  color: white;
+}
+
 @media only screen and (min-width: 769px) {
   .form-field-wrapper .text-box {
     max-width: none;

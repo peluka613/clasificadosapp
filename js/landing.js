@@ -5,25 +5,23 @@ function init() {
 async function getProducts() {
   toggleSpinner(true);
 
-  fetch('http://localhost:3000/api/search/latest/3', { method: 'GET'})
-   .then(response => response.json())
-   .then(products => {
-     setTimeout(() => {
-       toggleSpinner(false);
-       renderProducts(products);
-     }, 2000)
-   })
-   .catch(error => {
-     console.log(error);
-     toggleAlert(true);
-   });
+  fetch("http://localhost:3000/api/search/latest/3", { method: "GET" })
+    .then((response) => response.json())
+    .then((products) => {
+      toggleSpinner(false);
+      renderProducts(products);
+    })
+    .catch((error) => {
+      console.log(error);
+      toggleAlert(true);
+    });
 }
 
 function renderProducts(products) {
-  let productsHtml = '';
-  const productWrapper = document.getElementById('products-wrapper');
+  let productsHtml = "";
+  const productWrapper = document.getElementById("products-wrapper");
 
-  products.forEach(product => {
+  products.forEach((product) => {
     productsHtml += `
       <div class="product-card">
         <img src="img/${product.FOTO}" alt="imagen producto">
@@ -39,15 +37,15 @@ function renderProducts(products) {
 }
 
 function toggleSpinner(show) {
-  const spinner = document.getElementById('spinner');
+  const spinner = document.getElementById("spinner");
 
-  spinner.style.display = show ? 'block' : 'none';
+  spinner.style.display = show ? "block" : "none";
 }
 
 function toggleAlert(show) {
-  const alert = document.getElementById('alert');
+  const alert = document.getElementById("alert");
 
-  alert.style.display = show ? 'block' : 'none';
+  alert.style.display = show ? "block" : "none";
 }
 
 init();
