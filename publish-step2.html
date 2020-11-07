@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Clasificados - Step1</title>
+    <title>Clasificados - Paso2</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
         rel="stylesheet"
@@ -15,7 +15,9 @@
 
 <body>
     <header class="header">
-        <a id="previous-button"></a>
+        <a class="header-button button-right">
+            <img src="./img/back.svg" alt="Back button">
+        </a>
         <h1>
             <img src="img/logo-header.svg" class="logo" alt="Clasificados app" />
         </h1>
@@ -23,30 +25,40 @@
             <img src="img/exit.svg" alt="exit button" />
         </a>
     </header>
-    <main class="main">
-        <section class="wrapper-page">
+    <main class="step2-page">
+        <section class="contact-info-section">
+            <div class="contact-info-section_title">
+                <p class="legend">Datos de contacto</p>
+                <div class="step-label">Paso <strong>2</strong> de <strong>2</strong></div>
+            </div>
+        </section>
+        <section class="wrapper-page form-section">
             <form class="first-step-form" action="step2.html">
                 <div class="form-field-wrapper">
                     <label for="contactNumber">Número de contacto*:</label>
                     <input
                         class="text-box"
                         id="contactNumber"
-                        type="text"
+                        type="tel"
+                        pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
                         name="contactNumber"
                         placeholder="Número de Whatsapp"
-                        autocomplete="off"
-                        required/>
+                        autocomplete="off"/>
                 </div>
                 <div class="form-field-wrapper">
                     <label for="photo">Foto del producto o servicio*:</label>
-                    <input
-                        class="text-box"
-                        id="photo"
-                        type="text"
-                        name="photo"
-                        placeholder="Selecciona una foto"
-                        autocomplete="off"
-                        required/>
+                    <div class="photo-input-wrapper">
+                        <input
+                            class="text-box photo-input-wrapper_input"
+                            id="uploadPhoto"
+                            type="text"
+                            name="photo"
+                            placeholder="Selecciona una foto"
+                            autocomplete="off"
+                            readonly/>
+                        <input class="photo-input-wrapper_file-button" id="fileButton" type="file" accept="image/png, image/jpeg, image/gif">
+                        <button class="photo-input-wrapper_facade-button" type="button" id="facadeButton"></button>
+                    </div>
                     <div class="photo-disclaimer">Sólo puedes adjuntar imágenes JPG, PNG o GIF</div>
                 </div>
                 <div class="social-media-disclaimer">
@@ -61,8 +73,7 @@
                         type="text"
                         name="facebookId"
                         placeholder="Facebook"
-                        autocomplete="off"
-                        required/>
+                        autocomplete="off"/>
                 </div>
                 <div class="form-field-wrapper">
                     <input
@@ -71,8 +82,7 @@
                         type="text"
                         name="instagramId"
                         placeholder="Instagram"
-                        autocomplete="off"
-                        required/>
+                        autocomplete="off"/>
                 </div>
                 <div class="form-field-wrapper">
                     <input
@@ -81,18 +91,17 @@
                         type="text"
                         name="twitterId"
                         placeholder="Twitter"
-                        autocomplete="off"
-                        required/>
+                        autocomplete="off"/>
                 </div>
                 <p class="publish-offer-disclaimer">Al publicar esta oferta usted está aceptando los términos y condiciones de tratamiento de datos.</p>
                 <div class="form-action">
-                    <button id="next" class="primary-button" type="submit">PUBLICAR OFERTA</button>
+                    <button id="publishButton" class="primary-button" type="submit">PUBLICAR OFERTA</button>
                 </div>
             </form>
         </section>
     </main>
 
-    <!-- <script src="../clasificadosapp/js/publish-step2.js"></script> -->
+    <script src="../clasificadosapp/js/publish-step2.js"></script>
 </body>
 
 </html>
