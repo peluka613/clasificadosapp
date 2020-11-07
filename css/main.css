@@ -204,6 +204,17 @@ h4 {
   font-weight: bold;
 }
 
+.step-label {
+  background: #F0F1F3 0% 0% no-repeat padding-box;
+  border-bottom-left-radius: 28px;
+  border-top-left-radius: 28px;
+  color: #607AE2;
+  line-height: 24px;
+  padding: 0 15px 0;
+  font-size: 12px;
+  height: 27px;
+}
+
 @media only screen and (min-width: 769px) {
   .form-field-wrapper .text-box {
     max-width: none;

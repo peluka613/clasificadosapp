@@ -11,21 +11,12 @@ header {
 .publish-options-container .title-container {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   margin-bottom: 20px;
 }
 
 .publish-options-container .title {
   font-weight: bold;
-}
-
-.publish-options-container .step-label {
-  background: #F0F1F3 0% 0% no-repeat padding-box;
-  border-bottom-left-radius: 28px;
-  border-top-left-radius: 28px;
-  color: #607AE2;
-  line-height: 24px;
-  padding: 0 15px 0;
-  font-size: 12px;
 }
 
 .publish-options-container .disclaimer {

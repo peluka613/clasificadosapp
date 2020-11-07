@@ -2,6 +2,35 @@ header {
   justify-content: space-between;
 }
 
+.step2-page {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.contact-info-section_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 15px 0 15px 30px;
+  background: rgba(240, 241, 243, 0.3);
+}
+
+.contact-info-section_title .legend {
+  color: #233BA0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.form-section {
+  padding: 34px 30px;
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
 .form-field-wrapper .photo-input-wrapper {
   display: flex;
   max-width: 297px;
