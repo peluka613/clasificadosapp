@@ -84,4 +84,8 @@ header {
   .form-field-wrapper .background-image-position {
     background-position: 555px;
   }
+
+  .form-field-wrapper .photo-input-wrapper {
+    max-width: none;
+  }
 }
