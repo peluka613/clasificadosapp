@@ -2,37 +2,11 @@ header {
     justify-content: space-between;
 }
 
-.landing-welcome {
-    flex-direction: column;
-    margin-top: 25px;
-}
-
-h2, h3 {
-    text-align: center;
-}
-
-.landing-welcome h3 {
-    color: #607ae2;
-    font-weight: 400;
-}
-
-.actions-selector {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 60px;
-}
-
 .publication-list {
     align-items: center;
     display: flex;
     flex-direction: column;
     margin-top: 45px;
-}
-
-.publication-list h3 {
-    color: #233ba0;
-    font-size: 15px;
-    margin-bottom: 30px;
 }
 
 .product-link {
@@ -90,17 +64,6 @@ h2, h3 {
 
 .spinner img {
     width: 100%;
-}
-
-.alert {
-    display: none;
-    padding: 25px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background: #f44336;
-    color: white;
 }
 
 .results-page {

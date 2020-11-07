@@ -2,6 +2,58 @@ header {
   justify-content: space-between;
 }
 
+.step2-page {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.contact-info-section_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 15px 0 15px 30px;
+  background: rgba(240, 241, 243, 0.3);
+}
+
+.contact-info-section_title .legend {
+  color: #233BA0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.form-section {
+  padding: 34px 30px;
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.form-field-wrapper .photo-input-wrapper {
+  display: flex;
+  max-width: 297px;
+  width: 100%;
+}
+
+.form-field-wrapper .photo-input-wrapper .photo-input-wrapper_input {
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.form-field-wrapper .photo-input-wrapper .photo-input-wrapper_facade-button {
+  background: center no-repeat url("../img/upload.svg"), linear-gradient(180deg, #6AE7FD 0%, #0DC3EF 100%);
+  border-radius: 0 5px 5px 0;
+  border: none;
+  box-sizing: content-box;
+  width: 45px;
+}
+
+.form-field-wrapper .photo-input-wrapper .photo-input-wrapper_file-button {
+  display: none;
+}
+
 .form-field-wrapper .photo-disclaimer {
   color: #607AE2;
   font-size: 10px;
@@ -60,5 +112,9 @@ header {
 @media only screen and (min-width: 769px) {
   .form-field-wrapper .background-image-position {
     background-position: 555px;
+  }
+
+  .form-field-wrapper .photo-input-wrapper {
+    max-width: none;
   }
 }
