@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clasificados - Search</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/search.css" />
+</head>
+
+<body>
+    <header class="header header-buttons">
+        <a class="header-button button-right">
+            <img src="./img/back.svg" alt="Back button" />
+        </a>
+        <h1>
+            <img src="./img/logo-header.svg" class="logo" alt="Clasificados app" />
+        </h1>
+        <a class="header-button button-left">
+            <img src="./img/exit.svg" alt="Logout button" />
+        </a>
+    </header>
+    <main class="main">
+        <section class="page-heading">
+            <div class="welcome-message">
+                <h2 class="welcome-text">¡Bienvenido!</h2>
+                <h3 class="user-name">Esteban Molina</h3>
+            </div>
+            <div class="actions-selector">
+                <a class="action-container">
+                    <img src="img/search.svg" class="search-icon" alt="Buscar icono" />
+                    <p><span>buscar</span> un producto o servicio</p>
+                </a>
+                <a class="action-container" href="publish-step1.html">
+                    <img src="img/bag.svg" class="bag-icon" alt="Publicar icono" />
+                    <p><span>publicar</span> un producto o servicio</p>
+                </a>
+            </div>
+        </section>
+        <section>
+            <h3 class="section-title">Qué estás buscando?</h3>
+            <div class="disclaimer">Los campos marcados con asterico (*) son obligatorios</div>
+        </section>
+        <section class="search-form-wrapper">
+            <form class="search-form" action="step2.html">
+                <div class="form-field-wrapper">
+                    <label for="productType">Tipo del producto o servicio*:</label>
+                    <div class="custom-select-wrapper text-box">
+                        <div class="custom-select">
+                            <div class="custom-select__trigger">
+                                <span>Tipo de producto o servicio</span>
+                                <div class="arrow">
+                                    <img src="img/select_arrow1.svg" class="arrow-icon" alt="flecha icono" />
+                                </div>
+                            </div>
+                            <div id="typesWrapper" class="custom-options">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-field-wrapper">
+                    <label for="productType">Ubicación del producto o servicio*:</label>
+                    <div class="custom-select-wrapper text-box">
+                        <div class="custom-select">
+                            <div class="custom-select__trigger">
+                                <span>Barrio, Municipio, Ciudad</span>
+                                <div class="arrow">
+                                    <img src="img/select_arrow1.svg" class="arrow-icon" alt="flecha icono" />
+                                </div>
+                            </div>
+                            <div id="typesWrapper" class="custom-options">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <button id="next" class="primary-button" type="submit">SIGUIENTE</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="../clasificadosapp/js/publish-step1.js"></script>
+</body>
+
+</html>
