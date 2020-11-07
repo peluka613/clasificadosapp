@@ -6,7 +6,7 @@ function auth(req, res) {
             res.status(401).send({error: "Usuario o password equivocado"});
         } else {
             res.status(200).send(clasificados[0]);
-        }        
+        }
     }).catch(function(err) {
         res.status(500).send({error: "Ha ocurrido un error inesperado"});
     });
