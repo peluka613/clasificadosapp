@@ -1,3 +1,7 @@
+#product-section {
+  display: none;
+}
+
 .product-title {
   color: #233BA0;
   font-size: 20px;
@@ -56,4 +60,13 @@
   background: transparent linear-gradient(180deg, #96A8FC 0%, #677FE1 100%) 0% 0% no-repeat padding-box;
   border-radius: 28px;
   border: 0;
+  cursor: pointer;
+}
+
+.spinner {
+  display: none;
+}
+
+.spinner img {
+  width: 100%;
 }
