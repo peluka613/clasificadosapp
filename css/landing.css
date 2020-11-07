@@ -1,0 +1,133 @@
+header {
+    justify-content: space-between;
+}
+
+.landing-welcome {
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+.landing-welcome h3 {
+    color: #607ae2;
+    font-weight: 400;
+}
+
+.actions-selector {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.publication-list {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+}
+
+.publication-list h3 {
+    color: #233ba0;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.product-card {
+    display: flex;
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    padding: 11px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.product-card + .product-card {
+    margin-top: 12px;
+}
+
+.product-card img {
+    max-width: 93px;
+    border-radius: 5px;
+}
+
+.product-card-text-container {
+    margin: 0 15px;
+    overflow: hidden;
+}
+
+.product-card h4 {
+    color: #607ae2;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.product-card p {
+    color: #9d9d9d;
+    font-size: 12px;
+    font-weight: 300;
+    height: 50px;
+    line-height: 1.4;
+    margin: 0;
+    text-overflow: ellipsis;
+}
+
+.spinner {
+    display: none;
+}
+
+.spinner img {
+    width: 100%;
+}
+
+.alert {
+    display: none;
+    padding: 25px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #f44336;
+    color: white;
+}
+
+.results-page {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: transparent linear-gradient(0deg, #F0F1F3 0%, #F0F1F300 100%) 0% 0% no-repeat padding-box;
+}
+
+.results-page .total-info {
+    padding: 20px 30px;
+    background-color: #fff;
+}
+
+.results-page .total-info {
+    color: #233BA0;
+    font-weight: bold;
+    margin: 0;
+}
+
+.results-page .total-info span {
+    color: #607AE2;
+}
+
+.results-page .change-search {
+    padding: 20px 30px;
+    background: rgba(240, 241, 243, 0.3);
+}
+
+.results-page .publication-list {
+    padding: 20px 30px;
+    margin-top: 0;
+}
+
+.results-page .actions {
+    display: flex;
+    justify-content: center;
+}
