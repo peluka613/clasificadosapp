@@ -9,6 +9,10 @@ header {
     margin-top: 45px;
 }
 
+.product-link {
+    text-decoration: none;
+}
+
 .product-card {
     display: flex;
     max-width: 400px;
@@ -47,6 +51,11 @@ header {
     line-height: 1.4;
     margin: 0;
     text-overflow: ellipsis;
+}
+
+.product-card:hover {
+    border: 1px solid black;
+    cursor: pointer;
 }
 
 .spinner {

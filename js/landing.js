@@ -23,13 +23,15 @@ function renderProducts(products) {
 
   products.forEach((product) => {
     productsHtml += `
-      <div class="product-card">
-        <img src="img/${product.FOTO}" alt="imagen producto">
-        <div class="product-card-text-container">
-          <h4>${product.NOMBRE}</h4>
-          <p>${product.DESCRIPCION}</p>
+      <a href="product-details.html?id=${product.ID}" class="product-link">
+        <div class="product-card">
+          <img src="img/${product.FOTO}" alt="imagen producto">
+          <div class="product-card-text-container">
+            <h4>${product.NOMBRE}</h4>
+            <p>${product.DESCRIPCION}</p>
+          </div>
         </div>
-      </div>
+      </a>
     `;
   });
 
