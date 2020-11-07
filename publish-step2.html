@@ -34,19 +34,22 @@
                         type="text"
                         name="contactNumber"
                         placeholder="Número de Whatsapp"
-                        autocomplete="off"
-                        required/>
+                        autocomplete="off"/>
                 </div>
                 <div class="form-field-wrapper">
                     <label for="photo">Foto del producto o servicio*:</label>
-                    <input
-                        class="text-box"
-                        id="photo"
-                        type="text"
-                        name="photo"
-                        placeholder="Selecciona una foto"
-                        autocomplete="off"
-                        required/>
+                    <div class="photo-input-wrapper">
+                        <input
+                            class="text-box photo-input-wrapper_input"
+                            id="uploadPhoto"
+                            type="text"
+                            name="photo"
+                            placeholder="Selecciona una foto"
+                            autocomplete="off"
+                            disabled/>
+                        <input class="photo-input-wrapper_file-button" id="fileButton" type="file">
+                        <button class="photo-input-wrapper_facade-button" type="button" id="facadeButton"></button>
+                    </div>
                     <div class="photo-disclaimer">Sólo puedes adjuntar imágenes JPG, PNG o GIF</div>
                 </div>
                 <div class="social-media-disclaimer">
@@ -61,8 +64,7 @@
                         type="text"
                         name="facebookId"
                         placeholder="Facebook"
-                        autocomplete="off"
-                        required/>
+                        autocomplete="off"/>
                 </div>
                 <div class="form-field-wrapper">
                     <input
@@ -71,8 +73,7 @@
                         type="text"
                         name="instagramId"
                         placeholder="Instagram"
-                        autocomplete="off"
-                        required/>
+                        autocomplete="off"/>
                 </div>
                 <div class="form-field-wrapper">
                     <input
@@ -81,18 +82,17 @@
                         type="text"
                         name="twitterId"
                         placeholder="Twitter"
-                        autocomplete="off"
-                        required/>
+                        autocomplete="off"/>
                 </div>
                 <p class="publish-offer-disclaimer">Al publicar esta oferta usted está aceptando los términos y condiciones de tratamiento de datos.</p>
                 <div class="form-action">
-                    <button id="next" class="primary-button" type="submit">PUBLICAR OFERTA</button>
+                    <button id="publishButton" class="primary-button" type="submit">PUBLICAR OFERTA</button>
                 </div>
             </form>
         </section>
     </main>
 
-    <!-- <script src="../clasificadosapp/js/publish-step2.js"></script> -->
+    <script src="../clasificadosapp/js/publish-step2.js"></script>
 </body>
 
 </html>

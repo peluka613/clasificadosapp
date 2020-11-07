@@ -2,6 +2,29 @@ header {
   justify-content: space-between;
 }
 
+.form-field-wrapper .photo-input-wrapper {
+  display: flex;
+  max-width: 297px;
+  width: 100%;
+}
+
+.form-field-wrapper .photo-input-wrapper .photo-input-wrapper_input {
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.form-field-wrapper .photo-input-wrapper .photo-input-wrapper_facade-button {
+  background: center no-repeat url("../img/upload.svg"), linear-gradient(180deg, #6AE7FD 0%, #0DC3EF 100%);
+  border-radius: 0 5px 5px 0;
+  border: none;
+  box-sizing: content-box;
+  width: 45px;
+}
+
+.form-field-wrapper .photo-input-wrapper .photo-input-wrapper_file-button {
+  display: none;
+}
+
 .form-field-wrapper .photo-disclaimer {
   color: #607AE2;
   font-size: 10px;
