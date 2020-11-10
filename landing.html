@@ -9,27 +9,28 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/landing.css" />
   </head>
 
   <body>
-    <header class="header">
-      <a id="previous-button"> </a>
+    <header class="header header-buttons">
+      <a class="header-button button-right">
+        <img src="./img/back.svg" alt="Back button" />
+      </a>
       <h1>
-        <img src="img/logo-header.svg" class="logo" alt="Clasificados app" />
+        <img src="./img/logo-header.svg" class="logo" alt="Clasificados app" />
       </h1>
-      <a id="exit-button" href="login.html">
-        <img src="img/exit.svg" alt="exit button" />
+      <a class="header-button button-left" id="exit-button">
+        <img src="./img/exit.svg" alt="Logout button" />
       </a>
     </header>
     <main class="main">
       <section class="page-heading">
         <div class="welcome-message">
           <h2 class="welcome-text">¡Bienvenido!</h2>
-          <h3 class="user-name">Esteban Molina</h3>
+          <h3 class="user-name" id="name-user"></h3>
         </div>
         <div class="actions-selector">
-          <a class="action-container">
+          <a class="action-container" href="search.html">
             <img src="img/search.svg" class="search-icon" alt="Buscar icono" />
             <p><span>buscar</span> un producto o servicio</p>
           </a>
@@ -50,5 +51,6 @@
     </main>
 
     <script src="js/landing.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
