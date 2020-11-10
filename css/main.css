@@ -416,6 +416,11 @@ h4 {
   margin-top: 45px;
 }
 
+.spinner {
+  width: 50px;
+  margin: 0 auto;
+}
+
 @media only screen and (min-width: 769px) {
   .form-field-wrapper .text-box {
     max-width: none;
