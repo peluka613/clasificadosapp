@@ -1,8 +1,7 @@
 function loginUser() {
-  toggleAlert(false, '');
+  toggleAlert(false, "");
 
-  var headers = new Headers();
-
+  const headers = new Headers();
   headers.append("Content-Type", "application/json");
 
   fetch("http://localhost:3000/api/auth/", {
@@ -37,9 +36,10 @@ function init() {
   } catch (error) {
     console.log(error);
   }
-  const element = document.querySelector(".login-form");
 
-  element.addEventListener("submit", (event) => {
+  const loginForm = document.querySelector(".login-form");
+
+  loginForm.addEventListener("submit", (event) => {
     event.preventDefault();
     loginUser();
   });

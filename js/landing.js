@@ -1,5 +1,19 @@
 function init() {
   getProducts();
+  getUserData();
+}
+
+function getUserData() {
+  try {
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (user) {
+      const userNameTitle = document.querySelector("#name-user");
+      userNameTitle.innerHTML = user.nombre_completo;
+    }
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 async function getProducts() {
@@ -12,7 +26,7 @@ async function getProducts() {
       renderProducts(products);
     })
     .catch((error) => {
-      console.log(error);
+      toggleSpinner(false);
       toggleAlert(true);
     });
 }
@@ -23,13 +37,11 @@ function renderProducts(products) {
 
   products.forEach((product) => {
     productsHtml += `
-      <a href="product-details.html?id=${product.ID}" class="product-link">
-        <div class="product-card">
-          <img src="img/${product.FOTO}" alt="imagen producto">
-          <div class="product-card-text-container">
-            <h4>${product.NOMBRE}</h4>
-            <p>${product.DESCRIPCION}</p>
-          </div>
+      <a class="product-card" href="product-details.html?id=${product.ID}" class="product-link">
+        <img src="img/${product.FOTO}" alt="imagen producto">
+        <div class="product-card-text-container">
+          <h4>${product.NOMBRE}</h4>
+          <p>${product.DESCRIPCION}</p>
         </div>
       </a>
     `;
