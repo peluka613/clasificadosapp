@@ -37,7 +37,7 @@ function renderProducts(products) {
 
   products.forEach((product) => {
     productsHtml += `
-      <a class="product-card" href="product-details.html?id=${product.ID}" class="product-link">
+      <a class="product-card" href="product-details.html?id=${product.ID}">
         <img src="img/${product.FOTO}" alt="imagen producto">
         <div class="product-card-text-container">
           <h4>${product.NOMBRE}</h4>
