@@ -3,19 +3,6 @@ function init() {
   getUserData();
 }
 
-function getUserData() {
-  try {
-    const user = JSON.parse(localStorage.getItem("user"));
-
-    if (user) {
-      const userNameTitle = document.querySelector("#name-user");
-      userNameTitle.innerHTML = user.nombre_completo;
-    }
-  } catch (error) {
-    console.log(error);
-  }
-}
-
 async function getProducts() {
   toggleSpinner(true);
 
