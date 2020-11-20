@@ -366,6 +366,7 @@ h4 {
   cursor: pointer;
   transition: box-shadow 0.2s linear;
   text-decoration: none;
+  max-height: 97px;
 }
 
 .product-card:hover {
