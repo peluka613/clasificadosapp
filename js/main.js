@@ -3,10 +3,12 @@ var userData = {};
 function listeners() {
   const logoutButton = document.querySelector("#exit-button");
 
-  logoutButton.addEventListener("click", () => {
-    localStorage.removeItem("user");
-    window.location.href = "login.html";
-  });
+  if (logoutButton) {
+    logoutButton.addEventListener("click", () => {
+      localStorage.removeItem("user");
+      window.location.href = "login.html";
+    });
+  }
 
   document.querySelectorAll(".custom-select-wrapper").forEach((item) => {
     item.addEventListener("click", openSelector);
@@ -17,7 +19,9 @@ function addCustomOpionListeners() {
   const options = document.querySelectorAll(".custom-option");
 
   options.forEach((option) => {
-    option.removeEventListener("mousemove", () => { console.log('removed') });
+    option.removeEventListener("mousemove", () => {
+      console.log("removed");
+    });
   });
 
   options.forEach((option) => {
@@ -123,8 +127,8 @@ function renderProducts(products) {
     `;
   });
 
-  if (productsHtml === '') {
-    productsHtml = '<span>No hay productos para mostrar</span>'
+  if (productsHtml === "") {
+    productsHtml = "<span>No hay productos para mostrar</span>";
   }
 
   productWrapper.innerHTML = productsHtml;
