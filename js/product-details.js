@@ -20,7 +20,7 @@ function renderProduct(product) {
   let itemsHtml = "";
 
   productTitle.innerHTML = product.NOMBRE;
-  productImage.setAttribute("src", "img/" + product.FOTO);
+  productImage.setAttribute("src", product.FOTO);
   productDescription.innerHTML = product.DESCRIPCION;
 
   if (product.DIRECCION) {
