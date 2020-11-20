@@ -35,11 +35,11 @@ function validateParams() {
     typeOfServiceSelected.length > 0
   ) {
     localStorage.setItem('step1', JSON.stringify({
-      categorySelected: categorySelected.getAttribute('data-id'),
-      citySelected: citySelected.getAttribute('data-id'),
-      productDescription: productDescription.value,
-      productName: productName.value,
-      typeOfProduct: typeOfServiceSelected[0].value
+      CATEGORIA: categorySelected.getAttribute('data-id'),
+      MUNICIPIO: citySelected.getAttribute('data-id'),
+      DESCRIPCION: productDescription.value,
+      NOMBRE: productName.value,
+      TIPO_CLASIFICADO: typeOfServiceSelected[0].value
     }));
     window.location.href = 'publish-step2.html'
   } else {

@@ -4,13 +4,13 @@ const facebookId = document.querySelector("#facebookId");
 const instagramId = document.querySelector("#instagramId");
 const twitterId = document.querySelector("#twitterId");
 const secondStepForm = document.querySelector(".second-step-form");
-const step1Data = {};
+let step1Data = {};
 
 checkData();
 
 function checkData() {
   try {
-    const step1Data = JSON.parse(localStorage.getItem("step1"));
+    step1Data = JSON.parse(localStorage.getItem("step1"));
 
     if (step1Data) {
       addListeners();
@@ -38,23 +38,25 @@ function createService() {
   toggleAlert(false, "");
   toggleSpinner(true);
   const headers = new Headers();
+  const body = {
+    CATEGORIA: step1Data.CATEGORIA,
+    MUNICIPIO: step1Data.MUNICIPIO,
+    DESCRIPCION: step1Data.DESCRIPCION,
+    NOMBRE: step1Data.NOMBRE,
+    TIPO_CLASIFICADO: step1Data.TIPO_CLASIFICADO,
+    CELULAR: contactNumber.value,
+    FOTO: uploadPhoto.value,
+    FACEBOOK: facebookId.value,
+    INSTAGRAM: instagramId.value,
+    TWITTER: twitterId.value,
+    USUARIO: userData.id
+  };
   headers.append("Content-Type", "application/json");
 
-  fetch("http://localhost:3000/api/service/", {
+  fetch("http://localhost:3000/api/services/", {
     method: "POST",
     headers: headers,
-    body: JSON.stringify({
-      categorySelected: step1Data.categorySelected,
-      citySelected: step1Data.citySelected,
-      productDescription: step1Data.productDescription,
-      productName: step1Data.productName,
-      typeOfProduct: step1Data.typeOfProduct,
-      contactNumber: contactNumber.value,
-      uploadPhoto: uploadPhoto.value,
-      facebookId: facebookId.value,
-      instagramId: instagramId.value,
-      twitterId: twitterId.value,
-    }),
+    body: JSON.stringify(body),
   })
     .then((response) => response.json())
     .then((data) => {

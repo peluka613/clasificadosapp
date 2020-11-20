@@ -1,3 +1,5 @@
+var userData = {};
+
 function listeners() {
   const logoutButton = document.querySelector("#exit-button");
 
@@ -25,13 +27,13 @@ function addCustomOpionListeners() {
 
 function getUserData() {
   try {
-    const user = JSON.parse(localStorage.getItem("user"));
+    userData = JSON.parse(localStorage.getItem("user"));
 
-    if (user) {
+    if (userData) {
       const userNameTitle = document.querySelector("#name-user");
 
       if (userNameTitle) {
-        userNameTitle.innerHTML = user.nombre_completo;
+        userNameTitle.innerHTML = userData.nombre_completo;
       }
     }
   } catch (error) {
