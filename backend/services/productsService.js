@@ -44,7 +44,19 @@ function searchById(publicationId) {
   });
 }
 
+function savePublication(body) {
+  const consulta = `INSERT INTO CLASIFICADOS SET ?`;
+
+  return new Promise(function(resolve, reject) {
+      connection.query(consulta, body, function(err, resultado, campos) {
+        if (err) reject(err);
+        resolve(resultado);
+      });
+  });
+}
+
 exports.searchLatestPublications = searchLatestPublications;
 exports.searchMyPublications = searchMyPublications;
 exports.searchByCityAndCategory = searchByCityAndCategory;
 exports.searchById = searchById;
+exports.savePublication = savePublication;

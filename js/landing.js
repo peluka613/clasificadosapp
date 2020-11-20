@@ -1,6 +1,5 @@
 function init() {
   getProducts();
-  getUserData();
 }
 
 async function getProducts() {
