@@ -1,7 +1,7 @@
 const { connection } = require('../db/dbconnector');
 
 function searchLatestPublications(items) {
-    const consulta = `SELECT ID, NOMBRE, DESCRIPCION, FOTO, FACEBOOK, INSTAGRAM, TWITTER, DIRECCION, CELULAR, CATEGORIA, TIPO_CLASIFICADO, MUNICIPIO, USUARIO, FECHA_CREACION FROM clasificados ORDER BY FECHA_CREACION DESC LIMIT ?`;
+    const consulta = `SELECT ID, NOMBRE, DESCRIPCION, FOTO, FACEBOOK, INSTAGRAM, TWITTER, DIRECCION, CELULAR, CATEGORIA, TIPO_CLASIFICADO, MUNICIPIO, USUARIO, FECHA_CREACION FROM CLASIFICADOS ORDER BY FECHA_CREACION DESC LIMIT ?`;
 
     return new Promise(function(resolve, reject) {
         connection.query(consulta, items, function(err, resultado, campos) {
@@ -12,7 +12,7 @@ function searchLatestPublications(items) {
 }
 
 function searchMyPublications(userId) {
-  const consulta = `SELECT ID, NOMBRE, DESCRIPCION, FOTO, FACEBOOK, INSTAGRAM, TWITTER, DIRECCION, CELULAR, CATEGORIA, TIPO_CLASIFICADO, MUNICIPIO, USUARIO, FECHA_CREACION FROM clasificados WHERE USUARIO = ? ORDER BY FECHA_CREACION DESC`;
+  const consulta = `SELECT ID, NOMBRE, DESCRIPCION, FOTO, FACEBOOK, INSTAGRAM, TWITTER, DIRECCION, CELULAR, CATEGORIA, TIPO_CLASIFICADO, MUNICIPIO, USUARIO, FECHA_CREACION FROM CLASIFICADOS WHERE USUARIO = ? ORDER BY FECHA_CREACION DESC`;
 
   return new Promise(function(resolve, reject) {
       connection.query(consulta, userId, function(err, resultado, campos) {
@@ -23,7 +23,7 @@ function searchMyPublications(userId) {
 }
 
 function searchByCityAndCategory(cityId, categoryId) {
-  const consulta = `SELECT ID, NOMBRE, DESCRIPCION, FOTO, FACEBOOK, INSTAGRAM, TWITTER, DIRECCION, CELULAR, CATEGORIA, TIPO_CLASIFICADO, MUNICIPIO, USUARIO, FECHA_CREACION FROM clasificados WHERE MUNICIPIO = ? AND CATEGORIA = ? ORDER BY FECHA_CREACION DESC`;
+  const consulta = `SELECT ID, NOMBRE, DESCRIPCION, FOTO, FACEBOOK, INSTAGRAM, TWITTER, DIRECCION, CELULAR, CATEGORIA, TIPO_CLASIFICADO, MUNICIPIO, USUARIO, FECHA_CREACION FROM CLASIFICADOS WHERE MUNICIPIO = ? AND CATEGORIA = ? ORDER BY FECHA_CREACION DESC`;
 
   return new Promise(function(resolve, reject) {
       connection.query(consulta, [cityId, categoryId], function(err, resultado, campos) {
@@ -34,7 +34,7 @@ function searchByCityAndCategory(cityId, categoryId) {
 }
 
 function searchById(publicationId) {
-  const consulta = `SELECT ID, NOMBRE, DESCRIPCION, FOTO, FACEBOOK, INSTAGRAM, TWITTER, DIRECCION, CELULAR, CATEGORIA, TIPO_CLASIFICADO, MUNICIPIO, USUARIO, FECHA_CREACION FROM clasificados WHERE ID = ?`;
+  const consulta = `SELECT ID, NOMBRE, DESCRIPCION, FOTO, FACEBOOK, INSTAGRAM, TWITTER, DIRECCION, CELULAR, CATEGORIA, TIPO_CLASIFICADO, MUNICIPIO, USUARIO, FECHA_CREACION FROM CLASIFICADOS WHERE ID = ?`;
 
   return new Promise(function(resolve, reject) {
       connection.query(consulta, publicationId, function(err, resultado, campos) {
