@@ -97,6 +97,7 @@ h4 {
   margin-top: 40px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .primary-button {
@@ -109,6 +110,7 @@ h4 {
   color: #d6d6d6;
   cursor: pointer;
   box-shadow: none;
+  text-decoration: none;
 }
 
 .primary-button:hover {
@@ -192,6 +194,7 @@ h4 {
   padding: 5px 10px;
   font-weight: bold;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .step-label {

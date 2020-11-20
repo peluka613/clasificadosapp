@@ -1,44 +1,79 @@
-const contactNumber = document.querySelector('#contactNumber');
-const facadeButton = document.querySelector('#facadeButton');
-const fileButton = document.querySelector('#fileButton');
-const publishButton = document.querySelector('#publishButton');
-const uploadPhoto = document.querySelector('#uploadPhoto');
+const contactNumber = document.querySelector("#contactNumber");
+const uploadPhoto = document.querySelector("#uploadPhoto");
+const facebookId = document.querySelector("#facebookId");
+const instagramId = document.querySelector("#instagramId");
+const twitterId = document.querySelector("#twitterId");
+const secondStepForm = document.querySelector(".second-step-form");
+const step1Data = {};
 
-publishButton.setAttribute('disabled', true);
+checkData();
 
-addListeners();
+function checkData() {
+  try {
+    const step1Data = JSON.parse(localStorage.getItem("step1"));
+
+    if (step1Data) {
+      addListeners();
+    } else {
+      window.location.href = "publish-step1.html";
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 /**
  * Add listeners
  */
 function addListeners() {
-    contactNumber.addEventListener('keyup', validateParams);
-    facadeButton.addEventListener('click', openPhotoDialogBox);
-    fileButton.addEventListener('change', onFilenameChanges);
-    fileButton.addEventListener('change', validateParams);
+  secondStepForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (validateParams()) {
+      createService();
+    }
+  });
 }
 
-/**
- * Opens dialog box
- */
-function openPhotoDialogBox() {
-    fileButton.click();
-}
+function createService() {
+  toggleAlert(false, "");
+  toggleSpinner(true);
+  const headers = new Headers();
+  headers.append("Content-Type", "application/json");
 
-/**
- * Actions executed after loading the image file
- */
-function onFilenameChanges () {
-    uploadPhoto.value = fileButton.value.replace(/^.*\\/, "");
+  fetch("http://localhost:3000/api/service/", {
+    method: "POST",
+    headers: headers,
+    body: JSON.stringify({
+      categorySelected: step1Data.categorySelected,
+      citySelected: step1Data.citySelected,
+      productDescription: step1Data.productDescription,
+      productName: step1Data.productName,
+      typeOfProduct: step1Data.typeOfProduct,
+      contactNumber: contactNumber.value,
+      uploadPhoto: uploadPhoto.value,
+      facebookId: facebookId.value,
+      instagramId: instagramId.value,
+      twitterId: twitterId.value,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.error) {
+        toggleAlert(true, data.error);
+      } else {
+        localStorage.removeItem("step1");
+        window.location.href = "successful-publication.html";
+      }
+      toggleSpinner(false);
+    })
+    .catch((error) => {
+      toggleSpinner(false);
+    });
 }
 
 /**
  * Validate params before sending them
  */
 function validateParams() {
-    if (uploadPhoto.value && contactNumber.value) {
-        publishButton.removeAttribute('disabled');
-    } else {
-        publishButton.setAttribute('disabled', true);
-    }
+  return contactNumber.value && uploadPhoto.value;
 }
