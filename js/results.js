@@ -10,7 +10,7 @@ async function getProducts() {
 
   toggleSpinner(true);
 
-  fetch(`http://ec2-18-220-72-102.us-east-2.compute.amazonaws.com:4001:3000/api/search/filter/${cityId}/${categoryId}`, {
+  fetch(`http://ec2-18-220-72-102.us-east-2.compute.amazonaws.com:4001/api/search/filter/${cityId}/${categoryId}`, {
     method: "GET",
   })
     .then((response) => response.json())
