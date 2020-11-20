@@ -191,6 +191,7 @@ h4 {
   border-radius: 28px;
   padding: 5px 10px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .step-label {
@@ -233,6 +234,7 @@ h4 {
   position: relative;
   width: 100%;
   height: 45px;
+  cursor: pointer;
 }
 
 .custom-select__trigger {
@@ -276,7 +278,8 @@ h4 {
   z-index: 2;
 }
 
-.custom-options .custom-option:nth-child(even) {
+.custom-options .custom-option:hover,
+.custom-option.selected {
   background: #f0f1f3 0% 0% no-repeat padding-box;
 }
 
@@ -299,10 +302,6 @@ h4 {
   padding: 12px;
 }
 
-.custom-option.selected {
-  color: #233ba0;
-}
-
 /* Product description */
 .custom-text-area {
   border-radius: 5px;
@@ -312,7 +311,6 @@ h4 {
   font-family: "Poppins";
   font-size: 12px;
   height: 114px;
-  max-width: 297px;
   padding: 13px 21px 30px;
   resize: none;
   text-align: left;
@@ -363,12 +361,12 @@ h4 {
   box-sizing: border-box;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.2s linear;
+  transition: box-shadow 0.2s linear;
   text-decoration: none;
 }
 
 .product-card:hover {
-  box-shadow: 0px 3px 6px #E5ECFA;
+  box-shadow: 0px 3px 6px #e5ecfa;
 }
 
 .product-card + .product-card {
@@ -419,6 +417,65 @@ h4 {
 .spinner {
   width: 50px;
   margin: 0 auto;
+}
+
+.dot-center {
+  fill: red;
+}
+
+.custom-radio-button-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-radio-button-wrapper input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  top: -10px;
+  left: 0;
+}
+
+.custom-radio-button-wrapper + .custom-radio-button-wrapper {
+  margin-left: 24px;
+}
+
+.custom-radio-button-wrapper input[type="radio"]:checked + .custom-radio .radio {
+  border: 4px solid #677fe1;
+}
+.custom-radio-button-wrapper input[type="radio"]:checked + .custom-radio .radio-txt {
+  color: #677fe1;
+}
+
+.custom-radio-button-wrapper label {
+  cursor: pointer;
+}
+
+.custom-radio {
+  display: flex;
+  align-items: center;
+}
+
+.custom-radio .radio {
+  width: 7px;
+  height: 7px;
+  background: white;
+  border: 4px solid #9d9d9d;
+  border-radius: 50%;
+}
+
+.custom-radio .radio-txt {
+  margin-left: 11px;
+  color: #9d9d9d;
+}
+
+#products-wrapper {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 @media only screen and (min-width: 769px) {

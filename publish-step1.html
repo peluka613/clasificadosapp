@@ -14,27 +14,29 @@
 </head>
 
 <body>
-    <header class="header">
-        <a id="previous-button"></a>
-        <h1>
-            <img src="img/logo-header.svg" class="logo" alt="Clasificados app" />
-        </h1>
-        <a id="exit-button">
-            <img src="img/exit.svg" alt="exit button" />
+    <header class="header header-buttons">
+        <a class="header-button button-right" href="landing.html">
+          <img src="./img/back.svg" alt="Back button" />
         </a>
-    </header>
+        <h1>
+          <img src="./img/logo-header.svg" class="logo" alt="Clasificados app" />
+        </h1>
+        <a class="header-button button-left" id="exit-button">
+          <img src="./img/exit.svg" alt="Logout button" />
+        </a>
+      </header>
     <main class="main">
         <section class="page-heading">
             <div class="welcome-message">
                 <h2 class="welcome-text">¡Bienvenido!</h2>
-                <h3 class="user-name">Esteban Molina</h3>
+                <h3 id="name-user" class="user-name">Esteban Molina</h3>
             </div>
             <div class="actions-selector">
-                <a class="action-container">
+                <a class="action-container" href="search.html">
                     <img src="img/search.svg" class="search-icon" alt="Buscar icono" />
                     <p><span>buscar</span> un producto o servicio</p>
                 </a>
-                <a class="action-container" href="publish-step1.html">
+                <a class="action-container selected" href="publish-step1.html">
                     <img src="img/bag.svg" class="bag-icon" alt="Publicar icono" />
                     <p><span>publicar</span> un producto o servicio</p>
                 </a>
@@ -47,92 +49,40 @@
                     <div class="step-label">Paso <strong>1</strong> de <strong>2</strong></div>
                 </div>
                 <div class="disclaimer">Los campos marcados con asterico (*) son obligatorios</div>
-                <!-- TODO Fix aria-checked values, they are hardcoded -->
                 <div class="publish-options-wrapper">
-                    <label class="publish-option">
-                        <input type="radio" id="product" name="productService" aria-checked="true" checked>
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15"
-                            height="15" viewBox="0 0 15 15">
-                            <defs>
-                                <style>
-                                    .a {
-                                        fill: url(#a);
-                                    }
-
-                                    .b {
-                                        fill: #fff;
-                                    }
-                                </style>
-                                <linearGradient id="a" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                                    <stop offset="0" stop-color="#96a8fc" />
-                                    <stop offset="1" stop-color="#677fe1" />
-                                </linearGradient>
-                            </defs>
-                            <circle class="a radio-status" cx="7.5" cy="7.5" r="7.5" />
-                            <circle class="b" cx="3.5" cy="3.5" r="3.5" transform="translate(4 4)" />
-                        </svg>
-                        Producto
-                    </label>
-                    <label class="publish-option">
-                        <input type="radio" id="product" name="productService" aria-checked="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15"
-                            height="15" viewBox="0 0 15 15">
-                            <defs>
-                                <style>
-                                    .a {
-                                        fill: url(#a);
-                                    }
-
-                                    .b {
-                                        fill: #fff;
-                                    }
-                                </style>
-                                <linearGradient id="a" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                                    <stop offset="0" stop-color="#96a8fc" />
-                                    <stop offset="1" stop-color="#677fe1" />
-                                </linearGradient>
-                            </defs>
-                            <circle class="a radio-status" cx="7.5" cy="7.5" r="7.5" />
-                            <circle class="b" cx="3.5" cy="3.5" r="3.5" transform="translate(4 4)" />
-                        </svg>
-                        Servicio
-                    </label>
+                    <div class="custom-radio-button-wrapper">
+                        <input type="radio" id="productRadio" name="productService" value="1">
+                        <label class="custom-radio" for="productRadio">
+                            <span class="radio"></span>
+                            <span class="radio-txt">Producto</span>
+                        </label>
+                    </div>
+                    <div class="custom-radio-button-wrapper">
+                        <input type="radio" id="serviceRadio" name="productService" value="1">
+                        <label class="custom-radio" for="serviceRadio">
+                            <span class="radio"></span>
+                            <span class="radio-txt">Servicio</span>
+                        </label>
+                    </div>
                 </div>
             </div>
-            <form class="first-step-form" action="step2.html">
+            <form class="first-step-form">
                 <div class="form-field-wrapper">
                     <label for="productType">Tipo del producto o servicio*:</label>
                     <div class="custom-select-wrapper text-box">
-                        <div class="custom-select">
-                            <div class="custom-select__trigger">
-                                <span>Tipo de producto o servicio</span>
-                                <div class="arrow">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29">
-                                        <defs>
-                                            <style>
-                                                .a {
-                                                    fill: none;
-                                                }
-
-                                                .b {
-                                                    fill: #d6d6d6;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <g transform="translate(0 29) rotate(-90)">
-                                            <rect class="a" width="29" height="29" />
-                                            <g transform="translate(11.12 8.661)">
-                                                <path class="b select-status"
-                                                    d="M106.716,70.279a.954.954,0,0,0-1.349,0l-5.088,5.088a.954.954,0,0,0,0,1.349l5.088,5.088a.954.954,0,0,0,1.349-1.349L102.3,76.042l4.414-4.414A.954.954,0,0,0,106.716,70.279Z"
-                                                    transform="translate(-99.999 -70)" />
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="typesWrapper" class="custom-options">
-                            </div>
+                      <div class="custom-select">
+                        <div class="custom-select__trigger">
+                          <span>Tipo de producto o servicio</span>
+                          <div class="arrow">
+                            <img
+                              src="img/select_arrow1.svg"
+                              class="arrow-icon"
+                              alt="flecha icono"
+                            />
+                          </div>
                         </div>
+                        <div id="categoriesWrapper" class="custom-options"></div>
+                      </div>
                     </div>
                 </div>
                 <div class="form-field-wrapper">
@@ -148,38 +98,21 @@
                     <div class="char-counter">0 / 300</div>
                 </div>
                 <div class="form-field-wrapper">
-                    <label for="productLocation">Ubicación del producto o servicio*:</label>
+                    <label for="productType">Ubicación del producto o servicio*:</label>
                     <div class="custom-select-wrapper text-box">
-                        <div class="custom-select">
-                            <div class="custom-select__trigger">
-                                <span>Barrio, municipio, ciudad</span>
-                                <div class="arrow">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29">
-                                        <defs>
-                                            <style>
-                                                .a {
-                                                    fill: none;
-                                                }
-
-                                                .b {
-                                                    fill: #d6d6d6;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <g transform="translate(0 29) rotate(-90)">
-                                            <rect class="a" width="29" height="29" />
-                                            <g transform="translate(11.12 8.661)">
-                                                <path class="b select-status"
-                                                    d="M106.716,70.279a.954.954,0,0,0-1.349,0l-5.088,5.088a.954.954,0,0,0,0,1.349l5.088,5.088a.954.954,0,0,0,1.349-1.349L102.3,76.042l4.414-4.414A.954.954,0,0,0,106.716,70.279Z"
-                                                    transform="translate(-99.999 -70)" />
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="locationsWrapper" class="custom-options">
-                            </div>
+                      <div class="custom-select">
+                        <div class="custom-select__trigger">
+                          <span>Barrio, Municipio, Ciudad</span>
+                          <div class="arrow">
+                            <img
+                              src="img/select_arrow1.svg"
+                              class="arrow-icon"
+                              alt="flecha icono"
+                            />
+                          </div>
                         </div>
+                        <div id="citiesWrapper" class="custom-options"></div>
+                      </div>
                     </div>
                 </div>
                 <div class="form-action">
@@ -187,10 +120,9 @@
                 </div>
             </form>
         </section>
-        <script src="js/main.js"></script>
     </main>
-
-    <script src="../clasificadosapp/js/publish-step1.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/publish-step1.js"></script>
 </body>
 
 </html>

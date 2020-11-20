@@ -14,7 +14,7 @@
 
   <body>
     <header class="header header-buttons">
-      <a class="header-button button-right">
+      <a class="header-button button-right" href="landing.html">
         <img src="./img/back.svg" alt="Back button" />
       </a>
       <h1>
@@ -27,75 +27,21 @@
     <main class="results-page">
       <section class="wrapper-page">
         <div class="total-info">
-          <p><span>459</span> resultados para tu búsqueda</p>
+          <p><span id="total-items">459</span> resultados para tu búsqueda</p>
         </div>
         <div class="change-search">
-          <button class="secondary-button">Modificar búsqueda</button>
+          <a class="secondary-button" href="search.html">Modificar búsqueda</a>
         </div>
       </section>
       <section class="publication-list">
         <div class="spinner" id="spinner">
           <img src="img/spinner-blue.gif" alt="Spinner" />
         </div>
-        <div id="products-wrapper">
-          <div class="product-card">
-            <img
-              src="img/alex-loup-On2VseHUDXw-unsplash@2x.png"
-              alt="imagen producto"
-            />
-            <div class="product-card-text-container">
-              <h4>PASTEL</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Dolores aspernatur
-              </p>
-            </div>
-          </div>
-          <div class="product-card">
-            <img
-              src="img/alex-loup-On2VseHUDXw-unsplash@2x.png"
-              alt="imagen producto"
-            />
-            <div class="product-card-text-container">
-              <h4>PASTEL</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Dolores aspernatur
-              </p>
-            </div>
-          </div>
-          <div class="product-card">
-            <img
-              src="img/alex-loup-On2VseHUDXw-unsplash@2x.png"
-              alt="imagen producto"
-            />
-            <div class="product-card-text-container">
-              <h4>PASTEL</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Dolores aspernatur
-              </p>
-            </div>
-          </div>
-          <div class="product-card">
-            <img
-              src="img/alex-loup-On2VseHUDXw-unsplash@2x.png"
-              alt="imagen producto"
-            />
-            <div class="product-card-text-container">
-              <h4>PASTEL</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Dolores aspernatur
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="actions">
-        <button class="primary-button" type="submit">VER TODOS</button>
+        <div id="products-wrapper"></div>
       </section>
       <div class="alert" id="alert"><strong>Error!</strong> hubo un error!</div>
     </main>
+    <script src="js/main.js"></script>
+    <script src="js/results.js"></script>
   </body>
 </html>
