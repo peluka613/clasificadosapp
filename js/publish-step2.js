@@ -53,7 +53,7 @@ function createService() {
   };
   headers.append("Content-Type", "application/json");
 
-  fetch("http://localhost:3000/api/services/", {
+  fetch("http://ec2-18-220-72-102.us-east-2.compute.amazonaws.com:4001:3000/api/services/", {
     method: "POST",
     headers: headers,
     body: JSON.stringify(body),

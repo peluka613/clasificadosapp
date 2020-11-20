@@ -4,7 +4,7 @@ function loginUser() {
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
 
-  fetch("http://localhost:3000/api/auth/", {
+  fetch("http://ec2-18-220-72-102.us-east-2.compute.amazonaws.com:4001/api/auth/", {
     method: "POST",
     headers: headers,
     body: JSON.stringify({

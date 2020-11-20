@@ -1,6 +1,6 @@
 function getProduct(id) {
   toggleSpinner(true);
-  fetch("http://localhost:3000/api/search/" + id)
+  fetch("http://ec2-18-220-72-102.us-east-2.compute.amazonaws.com:4001/api/search/" + id)
     .then((response) => response.json())
     .then((products) => {
       const productSection = document.getElementById("product-section");

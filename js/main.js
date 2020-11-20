@@ -90,7 +90,7 @@ function setSelectedOption() {
 }
 
 async function getCategories() {
-  fetch("http://localhost:3000/api/categories", { method: "GET" })
+  fetch("hhttp://ec2-18-220-72-102.us-east-2.compute.amazonaws.com:4001/api/categories", { method: "GET" })
     .then((response) => response.json())
     .then((categories) => {
       renderListItems(categories, "categoriesWrapper");
@@ -99,7 +99,7 @@ async function getCategories() {
 }
 
 async function getLocations() {
-  fetch("http://localhost:3000/api/locations", { method: "GET" })
+  fetch("hhttp://ec2-18-220-72-102.us-east-2.compute.amazonaws.com:4001/api/locations", { method: "GET" })
     .then((response) => response.json())
     .then((locations) => {
       renderListItems(locations, "citiesWrapper");
