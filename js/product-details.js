@@ -1,29 +1,26 @@
-
 function getProduct(id) {
   toggleSpinner(true);
-  fetch('http://localhost:3000/api/search/' + id)
-    .then(response => response.json())
-    .then(products => {
-      setTimeout(() => {
-        const productSection = document.getElementById('product-section');
+  fetch("http://localhost:3000/api/search/" + id)
+    .then((response) => response.json())
+    .then((products) => {
+      const productSection = document.getElementById("product-section");
 
-        productSection.style.display = 'block';
-        renderProduct(products[0]);
-        toggleSpinner(false);
-      }, 2000);
+      productSection.style.display = "block";
+      renderProduct(products[0]);
+      toggleSpinner(false);
     });
 }
 
 function renderProduct(product) {
-  const productTitle = document.getElementById('product-title');
-  const productImage = document.getElementById('product-image');;
-  const productDescription = document.getElementById('product-description');
-  const itemsWrapper = document.getElementById('items-wrapper');
-  const whatsappButton = document.getElementById('whatsapp-button');
-  let itemsHtml = '';
+  const productTitle = document.getElementById("product-title");
+  const productImage = document.getElementById("product-image");
+  const productDescription = document.getElementById("product-description");
+  const itemsWrapper = document.getElementById("items-wrapper");
+  const whatsappButton = document.getElementById("whatsapp-button");
+  let itemsHtml = "";
 
   productTitle.innerHTML = product.NOMBRE;
-  productImage.setAttribute('src', 'img/' + product.FOTO);
+  productImage.setAttribute("src", "img/" + product.FOTO);
   productDescription.innerHTML = product.DESCRIPCION;
 
   if (product.DIRECCION) {
@@ -79,28 +76,22 @@ function renderProduct(product) {
   }
 
   itemsWrapper.innerHTML = itemsHtml;
-  whatsappButton.setAttribute('phone', product.CELULAR);
-}
-
-function toggleSpinner(show) {
-  const spinner = document.getElementById('spinner');
-
-  spinner.style.display = show ? 'block' : 'none';
+  whatsappButton.setAttribute("phone", product.CELULAR);
 }
 
 function goToWhatsapp(element) {
-  const number = element.getAttribute('phone');
+  const number = element.getAttribute("phone");
 
-  window.location.replace('https://wa.me/' + '57'+ number);
+  window.location.replace("https://wa.me/" + "57" + number);
 }
 
 function init() {
-  const productId = window.location.search.split('?id=')[1];
+  const productId = window.location.search.split("?id=")[1];
 
   if (productId) {
     getProduct(productId);
   } else {
-    window.location.replace('landing.html');
+    window.location.replace("landing.html");
   }
 }
 
