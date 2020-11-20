@@ -45,4 +45,14 @@ function init() {
   });
 }
 
+function toggleAlert(show, message) {
+  const alert = document.getElementById("alert");
+
+  if (message) {
+    alert.innerHTML = message;
+  }
+
+  alert.style.display = show ? "block" : "none";
+}
+
 init();

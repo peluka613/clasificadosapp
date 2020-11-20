@@ -39,6 +39,8 @@ function getUserData() {
       if (userNameTitle) {
         userNameTitle.innerHTML = userData.nombre_completo;
       }
+    } else {
+      window.location.href = 'login.html';
     }
   } catch (error) {
     console.log(error);
