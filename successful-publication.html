@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/successful-publication.css" />
+    <title>Successfull Publication</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/main.css" />
-  <link rel="stylesheet" href="./css/successful-publication.css" />
-  <title>Successfull Publication</title>
-</head>
+  <body>
+    <header class="header header-buttons">
+      <a class="header-button button-right" href="publish-step1.html">
+        <img src="./img/back.svg" alt="Back button" />
+      </a>
+      <h1>
+        <img src="./img/logo-header.svg" class="logo" alt="Clasificados app" />
+      </h1>
+      <a class="header-button button-left" id="exit-button">
+        <img src="./img/exit.svg" alt="Logout button" />
+      </a>
+    </header>
 
-<body>
-  <header class="header header-buttons">
-    <a class="header-button button-right">
-      <img src="./img/back.svg" alt="Back button">
-    </a>
-    <h1>
-      <img src="./img/logo-header.svg" class="logo" alt="Clasificados app" />
-    </h1>
-    <a class="header-button button-left" id="exit-button">
-      <img src="./img/exit.svg" alt="Logout button">
-    </a>
-  </header>
-
-  <main class="main">
-    <section class="main-wrapper">
-      <div class="image-wrapper">
-        <img src="./img/checkmark.svg" alt="Checkmark">
-      </div>
-      <h2 class="title">¡Tu oferta fue publicada con éxito!</h2>
-      <p class="text">Ahora puedes publicar otro producto o servicio, buscar productos y servicios de tu interés o ver
-        todos tus anuncios.</p>
-      <button class="primary-button">PUBLICAR OTRA OFERTA</button>
-      <button class="search-product-service secondary-button">Buscar un producto o servicio</button>
-    </section>
-  </main>
-</body>
-
+    <main class="main">
+      <section class="main-wrapper">
+        <div class="image-wrapper">
+          <img src="./img/checkmark.svg" alt="Checkmark" />
+        </div>
+        <h2 class="title">¡Tu oferta fue publicada con éxito!</h2>
+        <p class="text">
+          Ahora puedes publicar otro producto o servicio, buscar productos y
+          servicios de tu interés o ver todos tus anuncios.
+        </p>
+        <a class="primary-button" href="publish-step1.html">PUBLICAR OTRA OFERTA</a>
+        <a class="search-product-service secondary-button" href="search.html">
+          Buscar un producto o servicio
+        </a>
+      </section>
+    </main>
+  </body>
 </html>

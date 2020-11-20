@@ -14,15 +14,15 @@
 </head>
 
 <body>
-    <header class="header">
-        <a class="header-button button-right">
-            <img src="./img/back.svg" alt="Back button">
+    <header class="header header-buttons">
+        <a class="header-button button-right" href="publish-step1.html">
+          <img src="./img/back.svg" alt="Back button" />
         </a>
         <h1>
-            <img src="img/logo-header.svg" class="logo" alt="Clasificados app" />
+          <img src="./img/logo-header.svg" class="logo" alt="Clasificados app" />
         </h1>
-        <a id="exit-button">
-            <img src="img/exit.svg" alt="exit button" />
+        <a class="header-button button-left" id="exit-button">
+          <img src="./img/exit.svg" alt="Logout button" />
         </a>
     </header>
     <main class="step2-page">
@@ -33,7 +33,7 @@
             </div>
         </section>
         <section class="wrapper-page form-section">
-            <form class="first-step-form" action="step2.html">
+            <form class="second-step-form">
                 <div class="form-field-wrapper">
                     <label for="contactNumber">Número de contacto*:</label>
                     <input
@@ -43,9 +43,24 @@
                         pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
                         name="contactNumber"
                         placeholder="Número de Whatsapp"
-                        autocomplete="off"/>
+                        autocomplete="off"
+                        value="319 494 5891"
+                        required/>
                 </div>
                 <div class="form-field-wrapper">
+                    <label for="uploadPhoto">Foto del producto o servicio*:</label>
+                    <input
+                        class="text-box photo-input-wrapper_input"
+                        id="uploadPhoto"
+                        type="text"
+                        name="photo"
+                        placeholder="URL de foto"
+                        autocomplete="off"
+                        required
+                        value="asfasfs"/>
+                </div>
+                <!-- TODO: make the upload photo logic -->
+                <!--<div class="form-field-wrapper">
                     <label for="photo">Foto del producto o servicio*:</label>
                     <div class="photo-input-wrapper">
                         <input
@@ -60,7 +75,7 @@
                         <button class="photo-input-wrapper_facade-button" type="button" id="facadeButton"></button>
                     </div>
                     <div class="photo-disclaimer">Sólo puedes adjuntar imágenes JPG, PNG o GIF</div>
-                </div>
+                </div>-->
                 <div class="social-media-disclaimer">
                     <p class="title">Redes sociales:</label>
                     <p class="legend first-part">¿Quieres que tus clientes conozcan más sobre tu producto o servicio?</p>
@@ -96,13 +111,16 @@
                 <p class="publish-offer-disclaimer">Al publicar esta oferta usted está aceptando los términos y condiciones de tratamiento de datos.</p>
                 <div class="form-action">
                     <button id="publishButton" class="primary-button" type="submit">PUBLICAR OFERTA</button>
+                    <div class="spinner" id="spinner">
+                        <img src="img/spinner-blue.gif" alt="Spinner" />
+                      </div>
                 </div>
             </form>
         </section>
-        <script src="js/main.js"></script>
+        <div class="alert" id="alert"><strong>Error!</strong> hubo un error!</div>
     </main>
-
-    <script src="../clasificadosapp/js/publish-step2.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/publish-step2.js"></script>
 </body>
 
 </html>

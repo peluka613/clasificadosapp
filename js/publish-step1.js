@@ -1,11 +1,7 @@
-const locationsSelector = document.querySelector("#locationsWrapper");
 const nextButton = document.querySelector("#next");
 const productDescription = document.querySelector("#productDescription");
 const productName = document.querySelector("#productName");
-const typesSelector = document.querySelector("#typesWrapper");
 const firstStepForm = document.querySelector(".first-step-form");
-
-nextButton.setAttribute("disabled", true);
 
 getCategories();
 getLocations();
@@ -16,11 +12,10 @@ addListeners();
  */
 function addListeners() {
   productDescription.addEventListener("keyup", productDescriptionHandler);
-  productDescription.addEventListener("keyup", validateParams);
-  productName.addEventListener("keyup", validateParams);
 
   firstStepForm.addEventListener("submit", (event) => {
     event.preventDefault();
+    validateParams();
   });
 }
 
@@ -28,29 +23,26 @@ function addListeners() {
  * Validate params before sending them
  */
 function validateParams() {
-  const nextButton = document.querySelector("#next");
-  const selectedLocation = locationsSelector.getElementsByClassName("selected");
-  const selectedType = typesSelector.getElementsByClassName("selected");
-  let selectedLocationValue;
-  let selectedTypeValue;
-
-  if (selectedType[0]) {
-    selectedTypeValue = selectedType[0].innerHTML;
-  }
-
-  if (selectedLocation[0]) {
-    selectedLocationValue = selectedLocation[0].innerHTML;
-  }
+  const categorySelected = document.querySelector("#categoriesWrapper .selected");
+  const citySelected = document.querySelector("#citiesWrapper .selected");
+  const typeOfServiceSelected = document.querySelectorAll('[name="productService"]:checked');
 
   if (
     productDescription.value &&
     productName.value &&
-    selectedTypeValue &&
-    selectedLocationValue
+    categorySelected &&
+    citySelected &&
+    typeOfServiceSelected.length > 0
   ) {
-    nextButton.removeAttribute("disabled");
+    localStorage.setItem('step1', JSON.stringify({
+      categorySelected: categorySelected.getAttribute('data-id'),
+      citySelected: citySelected.getAttribute('data-id'),
+      productDescription: productDescription.value,
+      productName: productName.value,
+      typeOfProduct: typeOfServiceSelected[0].value
+    }));
+    window.location.href = 'publish-step2.html'
   } else {
-    nextButton.setAttribute("disabled", true);
   }
 }
 
