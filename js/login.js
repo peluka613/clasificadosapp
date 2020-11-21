@@ -33,6 +33,19 @@ function loginUser() {
 }
 
 /**
+ * Method to show a error message when the credentials are invalid
+ */
+function toggleAlert(show, message) {
+  const alert = document.getElementById("alert");
+
+  if (message) {
+    alert.innerHTML = message;
+  }
+
+  alert.style.display = show ? "block" : "none";
+}
+
+/**
  * Method check if the user is already logged in order to redirect to the landing page
  */
 function init() {
@@ -52,19 +65,6 @@ function init() {
     event.preventDefault();
     loginUser();
   });
-}
-
-/**
- * Method to show a error message when the credentials are invalid
- */
-function toggleAlert(show, message) {
-  const alert = document.getElementById("alert");
-
-  if (message) {
-    alert.innerHTML = message;
-  }
-
-  alert.style.display = show ? "block" : "none";
 }
 
 init();
