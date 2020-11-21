@@ -19,7 +19,7 @@ function addCustomOpionListeners() {
   const options = document.querySelectorAll(".custom-option");
 
   options.forEach((option) => {
-    option.removeEventListener("mousemove", () => {
+    option.removeEventListener("click", () => {
       console.log("removed");
     });
   });
@@ -27,6 +27,8 @@ function addCustomOpionListeners() {
   options.forEach((option) => {
     option.addEventListener("click", setSelectedOption);
   });
+
+
 }
 
 function getUserData() {
@@ -62,6 +64,7 @@ function renderListItems(items, section) {
 
   itemsWrapper.innerHTML = itemsHtml;
   addCustomOpionListeners();
+  itemsWrapper.style.display = "none";
 }
 
 function toggleSpinner(show) {
