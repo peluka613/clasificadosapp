@@ -4,10 +4,13 @@ const facebookId = document.querySelector("#facebookId");
 const instagramId = document.querySelector("#instagramId");
 const twitterId = document.querySelector("#twitterId");
 const secondStepForm = document.querySelector(".second-step-form");
+const createServiceAPIURL =
+  "http://ec2-18-220-72-102.us-east-2.compute.amazonaws.com:4001/api/services/";
 let step1Data = {};
 
-checkData();
-
+/**
+ * Check the localstorage in order to get the data in the step1
+ */
 function checkData() {
   try {
     step1Data = JSON.parse(localStorage.getItem("step1"));
@@ -34,9 +37,10 @@ function addListeners() {
   });
 }
 
+/**
+ * Create a new services/product using the API
+ */
 function createService() {
-  toggleAlert(false, "");
-  toggleSpinner(true);
   const headers = new Headers();
   const body = {
     CATEGORIA: step1Data.CATEGORIA,
@@ -49,11 +53,14 @@ function createService() {
     FACEBOOK: facebookId.value,
     INSTAGRAM: instagramId.value,
     TWITTER: twitterId.value,
-    USUARIO: userData.id
+    USUARIO: userData.id,
   };
+
+  toggleAlert(false, "");
+  toggleSpinner(true);
   headers.append("Content-Type", "application/json");
 
-  fetch("http://ec2-18-220-72-102.us-east-2.compute.amazonaws.com:4001/api/services/", {
+  fetch(createServiceAPIURL, {
     method: "POST",
     headers: headers,
     body: JSON.stringify(body),
@@ -79,3 +86,12 @@ function createService() {
 function validateParams() {
   return contactNumber.value && uploadPhoto.value;
 }
+
+/**
+ * Add listeners
+ */
+function init() {
+  checkData();
+}
+
+init();

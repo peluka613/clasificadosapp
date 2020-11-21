@@ -1,11 +1,8 @@
+const charCounter = document.querySelector(".char-counter");
+const firstStepForm = document.querySelector(".first-step-form");
 const nextButton = document.querySelector("#next");
 const productDescription = document.querySelector("#productDescription");
 const productName = document.querySelector("#productName");
-const firstStepForm = document.querySelector(".first-step-form");
-
-getCategories();
-getLocations();
-addListeners();
 
 /**
  * Add listeners
@@ -42,7 +39,6 @@ function validateParams() {
       TIPO_CLASIFICADO: typeOfServiceSelected[0].value
     }));
     window.location.href = 'publish-step2.html'
-  } else {
   }
 }
 
@@ -50,7 +46,16 @@ function validateParams() {
  * Handle typing event
  */
 function productDescriptionHandler() {
-  const charCounter = document.querySelector(".char-counter");
-
   charCounter.textContent = `${productDescription.value.length} / 300`;
 }
+
+/**
+ * Get the data for the dropdowns
+ */
+function init() {
+  getCategories();
+  getLocations();
+  addListeners();
+}
+
+init();
