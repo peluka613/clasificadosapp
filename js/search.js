@@ -1,9 +1,6 @@
-function init() {
-  getCategories();
-  getLocations();
-  addSubmitListeners();
-}
-
+/**
+ * Add listener to the search form
+ */
 function addSubmitListeners() {
   const searchForm = document.querySelector(".search-form");
 
@@ -18,6 +15,15 @@ function addSubmitListeners() {
       window.location.href = `results.html?category=${categoryId}&city=${cityId}`;
     }
   });
+}
+
+/**
+ * Get the data for the dropdowns
+ */
+function init() {
+  getCategories();
+  getLocations();
+  addSubmitListeners();
 }
 
 init();
