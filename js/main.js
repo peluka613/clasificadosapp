@@ -27,8 +27,6 @@ function addCustomOpionListeners() {
   options.forEach((option) => {
     option.addEventListener("click", setSelectedOption);
   });
-
-
 }
 
 function getUserData() {

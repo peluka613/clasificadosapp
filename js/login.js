@@ -1,10 +1,16 @@
-function loginUser() {
-  toggleAlert(false, "");
+const authAPIURL =
+  "http://ec2-18-220-72-102.us-east-2.compute.amazonaws.com:4001/api/auth/";
 
+/**
+ * Method to check the user credentials are valid
+ */
+function loginUser() {
   const headers = new Headers();
+
+  toggleAlert(false, "");
   headers.append("Content-Type", "application/json");
 
-  fetch("http://ec2-18-220-72-102.us-east-2.compute.amazonaws.com:4001/api/auth/", {
+  fetch(authAPIURL, {
     method: "POST",
     headers: headers,
     body: JSON.stringify({
@@ -26,6 +32,9 @@ function loginUser() {
     });
 }
 
+/**
+ * Method check if the user is already logged in order to redirect to the landing page
+ */
 function init() {
   try {
     const user = JSON.parse(localStorage.getItem("user"));
@@ -45,6 +54,9 @@ function init() {
   });
 }
 
+/**
+ * Method to show a error message when the credentials are invalid
+ */
 function toggleAlert(show, message) {
   const alert = document.getElementById("alert");
 
