@@ -159,8 +159,14 @@ h4 {
     0% no-repeat padding-box;
 }
 
-.action-container img {
+.action-container:hover .icon,
+.action-container.selected .icon {
+  filter: brightness(0) invert(1);
+}
+
+.action-container .icon {
   height: 30px;
+  cursor: pointer;
 }
 
 .action-container p {
