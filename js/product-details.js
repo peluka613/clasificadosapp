@@ -1,6 +1,12 @@
+const getProductAPIURL =
+  "http://ec2-18-220-72-102.us-east-2.compute.amazonaws.com:4001/api/search";
+
+/**
+ * Retrieve the product data
+ */
 function getProduct(id) {
   toggleSpinner(true);
-  fetch("http://ec2-18-220-72-102.us-east-2.compute.amazonaws.com:4001/api/search/" + id)
+  fetch(`${getProductAPIURL}/${id}`)
     .then((response) => response.json())
     .then((products) => {
       const productSection = document.getElementById("product-section");
@@ -11,6 +17,9 @@ function getProduct(id) {
     });
 }
 
+/**
+ * Render the product data
+ */
 function renderProduct(product) {
   const productTitle = document.getElementById("product-title");
   const productImage = document.getElementById("product-image");
@@ -79,12 +88,18 @@ function renderProduct(product) {
   whatsappButton.setAttribute("phone", product.CELULAR);
 }
 
+/**
+ * Open whatsapp app
+ */
 function goToWhatsapp(element) {
   const number = element.getAttribute("phone");
 
   window.location.replace("https://wa.me/" + "57" + number);
 }
 
+/**
+ * Get the id of the product and check if exist get the product data
+ */
 function init() {
   const productId = window.location.search.split("?id=")[1];
 

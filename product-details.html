@@ -1,46 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/product-details.css" />
+    <title>Detalles del producto</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/main.css" />
-  <link rel="stylesheet" href="./css/product-details.css" />
-  <title>Product Details</title>
-</head>
+  <body>
+    <header class="header header-buttons">
+      <a class="header-button button-right" href="landing.html">
+        <img src="./img/back.svg" alt="Back button" />
+      </a>
+      <h1>
+        <img src="./img/logo-header.svg" class="logo" alt="Clasificados app" />
+      </h1>
+      <a class="header-button button-left" id="exit-button">
+        <img src="./img/exit.svg" alt="Logout button" />
+      </a>
+    </header>
 
-<body>
-  <header class="header header-buttons">
-    <a class="header-button button-right" href="landing.html">
-      <img src="./img/back.svg" alt="Back button">
-    </a>
-    <h1>
-      <img src="./img/logo-header.svg" class="logo" alt="Clasificados app" />
-    </h1>
-    <a class="header-button button-left" id="exit-button">
-      <img src="./img/exit.svg" alt="Logout button">
-    </a>
-  </header>
-
-  <main class="main">
-    <div class="spinner" id="spinner">
-      <img src="img/spinner-blue.gif" alt="Spinner">
-    </div>
-    <section id="product-section">
-      <h1 class="product-title" id="product-title">Nombre del producto o servicio</h1>
-      <img src="./img/product-example.png" alt="Product example" class="product-image" id="product-image">
-      <p class="product-description" id="product-description">Descripción breve de la oferta, si llega a tener más de 3 líneas ponemos una
-        elipsis al final, esta puede ser tan extensa como se necesite y desplaza los elementos hacia abajo</p>
-      <div class="items-wrapper" id="items-wrapper">
+    <main class="main">
+      <div class="spinner" id="spinner">
+        <img src="img/spinner-blue.gif" alt="Spinner" />
       </div>
-      <button class="whatsapp-button" id="whatsapp-button" onclick="goToWhatsapp(this)">WHATSAPP</button>
-    </section>
-  </main>
+      <section id="product-section">
+        <h1 class="product-title" id="product-title">
+          Nombre del producto o servicio
+        </h1>
+        <img
+          src="./img/product-example.png"
+          alt="Product example"
+          class="product-image"
+          id="product-image"
+        />
+        <p class="product-description" id="product-description">
+          Descripción breve de la oferta, si llega a tener más de 3 líneas
+          ponemos una elipsis al final, esta puede ser tan extensa como se
+          necesite y desplaza los elementos hacia abajo
+        </p>
+        <div class="items-wrapper" id="items-wrapper"></div>
+        <button
+          class="whatsapp-button"
+          id="whatsapp-button"
+          onclick="goToWhatsapp(this)"
+        >
+          WHATSAPP
+        </button>
+      </section>
+    </main>
 
-  <script src="js/main.js"></script>
-  <script src="js/product-details.js"></script>
-</body>
-
+    <script src="js/main.js"></script>
+    <script src="js/product-details.js"></script>
+  </body>
 </html>
