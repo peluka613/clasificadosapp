@@ -1,5 +1,12 @@
 var userData = {};
+const categoriesAPIURL =
+  "http://ec2-18-220-72-102.us-east-2.compute.amazonaws.com:4001/api/categories";
+const locationsAPIURL =
+  "http://ec2-18-220-72-102.us-east-2.compute.amazonaws.com:4001/api/locations";
 
+/**
+ * Add listeners for the logout button and custom selects
+ */
 function listeners() {
   const logoutButton = document.querySelector("#exit-button");
 
@@ -15,6 +22,9 @@ function listeners() {
   });
 }
 
+/**
+ * Add listeners for each custom option item
+ */
 function addCustomOpionListeners() {
   const options = document.querySelectorAll(".custom-option");
 
@@ -29,6 +39,9 @@ function addCustomOpionListeners() {
   });
 }
 
+/**
+ * Get the logged user data
+ */
 function getUserData() {
   try {
     userData = JSON.parse(localStorage.getItem("user"));
@@ -40,7 +53,7 @@ function getUserData() {
         userNameTitle.innerHTML = userData.nombre_completo;
       }
     } else {
-      window.location.href = 'login.html';
+      window.location.href = "login.html";
     }
   } catch (error) {
     console.log(error);
@@ -65,6 +78,9 @@ function renderListItems(items, section) {
   itemsWrapper.style.display = "none";
 }
 
+/**
+ * Show/hide the spinner
+ */
 function toggleSpinner(show) {
   const spinner = document.getElementById("spinner");
 
@@ -96,8 +112,11 @@ function setSelectedOption() {
   ).textContent = this.textContent;
 }
 
-async function getCategories() {
-  fetch("http://ec2-18-220-72-102.us-east-2.compute.amazonaws.com:4001/api/categories", { method: "GET" })
+/**
+ * Get the categories data
+ */
+function getCategories() {
+  fetch(categoriesAPIURL, { method: "GET" })
     .then((response) => response.json())
     .then((categories) => {
       renderListItems(categories, "categoriesWrapper");
@@ -105,8 +124,11 @@ async function getCategories() {
     .catch((error) => {});
 }
 
-async function getLocations() {
-  fetch("http://ec2-18-220-72-102.us-east-2.compute.amazonaws.com:4001/api/locations", { method: "GET" })
+/**
+ * Get the locations data
+ */
+function getLocations() {
+  fetch(locationsAPIURL, { method: "GET" })
     .then((response) => response.json())
     .then((locations) => {
       renderListItems(locations, "citiesWrapper");
@@ -114,6 +136,9 @@ async function getLocations() {
     .catch((error) => {});
 }
 
+/**
+ * Render list of products
+ */
 function renderProducts(products) {
   let productsHtml = "";
   const productWrapper = document.getElementById("products-wrapper");
@@ -137,6 +162,9 @@ function renderProducts(products) {
   productWrapper.innerHTML = productsHtml;
 }
 
+/**
+ * Show/hide alert notification
+ */
 function toggleAlert(show, message) {
   const alert = document.getElementById("alert");
 
@@ -147,5 +175,12 @@ function toggleAlert(show, message) {
   alert.style.display = show ? "block" : "none";
 }
 
-listeners();
-getUserData();
+/**
+ * initial method
+ */
+function init() {
+  listeners();
+  getUserData();
+}
+
+init();
