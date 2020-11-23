@@ -24,11 +24,16 @@
         <img src="./img/exit.svg" alt="Logout button" />
       </a>
     </header>
-    <main class="main">
+    <main class="main gray-background">
       <section class="page-heading">
         <div class="welcome-message">
           <h2 class="welcome-text">¡Bienvenido!</h2>
           <h3 class="user-name" id="name-user"></h3>
+        </div>
+        <div class="view-my-publications">
+          <a class="secondary-button" href="results.html?me=true">
+            Ver mis anuncios
+          </a>
         </div>
         <div class="actions-selector">
           <a class="action-container selected" href="search.html">
@@ -41,56 +46,58 @@
           </a>
         </div>
       </section>
-      <section>
-        <h3 class="section-title">Qué estás buscando?</h3>
-        <div class="disclaimer">
-          Los campos marcados con asterico (*) son obligatorios
-        </div>
-      </section>
-      <section class="search-form-wrapper">
-        <form class="search-form">
-          <div class="form-field-wrapper">
-            <label for="productType">Tipo del producto o servicio*:</label>
-            <div class="custom-select-wrapper text-box">
-              <div class="custom-select">
-                <div class="custom-select__trigger">
-                  <span>Tipo de producto o servicio</span>
-                  <div class="arrow">
-                    <img
-                      src="img/select_arrow1.svg"
-                      class="arrow-icon"
-                      alt="flecha icono"
-                    />
+      <section class="page-wrapper white-background">
+        <section>
+          <h3 class="section-title">Qué estás buscando?</h3>
+          <div class="disclaimer">
+            Los campos marcados con asterico (*) son obligatorios
+          </div>
+        </section>
+        <section class="search-form-wrapper">
+          <form class="search-form">
+            <div class="form-field-wrapper">
+              <label for="productType">Tipo del producto o servicio*:</label>
+              <div class="custom-select-wrapper text-box">
+                <div class="custom-select">
+                  <div class="custom-select__trigger">
+                    <span>Tipo de producto o servicio</span>
+                    <div class="arrow">
+                      <img
+                        src="img/select_arrow1.svg"
+                        class="arrow-icon"
+                        alt="flecha icono"
+                      />
+                    </div>
                   </div>
+                  <div id="categoriesWrapper" class="custom-options"></div>
                 </div>
-                <div id="categoriesWrapper" class="custom-options"></div>
               </div>
             </div>
-          </div>
-          <div class="form-field-wrapper">
-            <label for="productType">Ubicación del producto o servicio*:</label>
-            <div class="custom-select-wrapper text-box">
-              <div class="custom-select">
-                <div class="custom-select__trigger">
-                  <span>Barrio, Municipio, Ciudad</span>
-                  <div class="arrow">
-                    <img
-                      src="img/select_arrow1.svg"
-                      class="arrow-icon"
-                      alt="flecha icono"
-                    />
+            <div class="form-field-wrapper">
+              <label for="productType">Ubicación del producto o servicio*:</label>
+              <div class="custom-select-wrapper text-box">
+                <div class="custom-select">
+                  <div class="custom-select__trigger">
+                    <span>Barrio, Municipio, Ciudad</span>
+                    <div class="arrow">
+                      <img
+                        src="img/select_arrow1.svg"
+                        class="arrow-icon"
+                        alt="flecha icono"
+                      />
+                    </div>
                   </div>
+                  <div id="citiesWrapper" class="custom-options"></div>
                 </div>
-                <div id="citiesWrapper" class="custom-options"></div>
               </div>
             </div>
-          </div>
-          <div class="form-action">
-            <button id="next" class="primary-button" type="submit">
-              BUSCAR
-            </button>
-          </div>
-        </form>
+            <div class="form-action">
+              <button id="next" class="primary-button" type="submit">
+                BUSCAR
+              </button>
+            </div>
+          </form>
+        </section>
       </section>
     </main>
     <script src="js/main.js"></script>

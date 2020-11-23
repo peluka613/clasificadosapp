@@ -2,8 +2,13 @@
     margin-top: 35px;
 }
 
-.page-heading .section-title {
-    margin-top: 60px;
-    text-align: center;
+.page-heading-login {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.page-heading-login .section-title {
     font-size: 20px;
+    margin: 0;
 }

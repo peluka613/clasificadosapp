@@ -42,7 +42,6 @@ h4 {
 }
 
 .main {
-  padding: 34px 30px;
   width: 100%;
   max-width: 650px;
   margin: 0 auto;
@@ -52,7 +51,6 @@ h4 {
 .logo-app-container {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
 }
 
 .form-field-wrapper {
@@ -201,6 +199,8 @@ h4 {
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
+  background: transparent;
+  font-size: 12px;
 }
 
 .step-label {
@@ -216,6 +216,11 @@ h4 {
 
 .page-heading {
   margin-bottom: 30px;
+}
+
+.page-wrapper,
+.page-heading {
+  padding: 34px 30px;
 }
 
 .page-heading .welcome-message {
@@ -484,6 +489,20 @@ h4 {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+.view-my-publications {
+  display: flex;
+  justify-content: center;
+  margin-top: 11px;
+}
+
+.gray-background {
+  background: transparent linear-gradient(0deg, #F0F1F3 0%, #F0F1F300 100%) 0% 0% no-repeat padding-box;
+}
+
+.white-background {
+  background-color: #fff;
 }
 
 @media only screen and (min-width: 769px) {
