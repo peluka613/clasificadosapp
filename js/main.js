@@ -53,7 +53,11 @@ function getUserData() {
         userNameTitle.innerHTML = userData.nombre_completo;
       }
     } else {
-      window.location.href = "login.html";
+      const isLoginPage = document.querySelector("#email");
+
+      if (!isLoginPage) {
+          window.location.href = "login.html";
+      }
     }
   } catch (error) {
     console.log(error);
